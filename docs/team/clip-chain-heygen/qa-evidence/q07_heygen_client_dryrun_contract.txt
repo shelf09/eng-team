@@ -1,0 +1,18 @@
+$ heygen_lipsync.py --video s1_desk.mp4 --audio s1_desk.wav --out s1_desk_heygen.mp4 --confirm-upload --dry-run
+{
+  "POST": "https://api.heygen.com/v3/lipsyncs",
+  "body": {
+    "video": {
+      "type": "asset_id",
+      "asset_id": "<upload /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s1_desk.mp4 via /v3/assets>"
+    },
+    "audio": {
+      "type": "asset_id",
+      "asset_id": "<upload /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/heygen/s1_desk.wav via /v3/assets>"
+    },
+    "mode": "precision",
+    "enable_dynamic_duration": false
+  },
+  "out": "/private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/dryrun_heygen.mp4"
+}
+exit=0

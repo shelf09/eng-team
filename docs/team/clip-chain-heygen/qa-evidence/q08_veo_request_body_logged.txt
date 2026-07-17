@@ -1,0 +1,10 @@
+$ python3 qa_veo_body.py  (logs the real submit() request body)
+--- without end keyframe:
+request instance keys: ['image', 'prompt']
+[s] op operations/logged
+--- with end keyframe:
+request instance keys: ['image', 'lastFrame', 'prompt']
+lastFrame.mimeType: image/png
+lastFrame bytes match _end.png: True
+[s] op operations/logged
+exit=0

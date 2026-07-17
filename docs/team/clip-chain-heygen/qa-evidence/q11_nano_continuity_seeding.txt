@@ -1,0 +1,9 @@
+$ python3 qa_nano_body.py  (logs the real gen() request bodies)
+prompt='SI K1' attached-images=['standing-ref']
+[sc1] saved
+prompt='SI E1' attached-images=['standing-ref', 'generated-keyframe']
+[sc1_end] saved
+prompt='SI K2' attached-images=['standing-ref', 'generated-keyframe']
+[sc2] saved
+main returned: True
+exit=0

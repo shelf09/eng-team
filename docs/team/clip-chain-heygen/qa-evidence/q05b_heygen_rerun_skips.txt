@@ -1,0 +1,33 @@
+$ rerun: CARTOON_DIR=A python3 0_chain.py --heygen
+=== s1_desk ===
+[s1_desk] exists, skipping
+[s1_desk_end] exists, skipping
+[s1_desk] exists, skipping
+FINISHED 1/1: ['s1_desk']
+[s1_desk] heygen exists, skipping
+=== s2_whiteboard ===
+[s2_whiteboard] exists, skipping
+[s2_whiteboard_end] exists, skipping
+[s2_whiteboard] exists, skipping
+FINISHED 1/1: ['s2_whiteboard']
+[s2_whiteboard] heygen exists, skipping
+=== s3_shock ===
+[s3_shock] exists, skipping
+[s3_shock_end] exists, skipping
+[s3_shock] exists, skipping
+FINISHED 1/1: ['s3_shock']
+[s3_shock] heygen exists, skipping
+=== s4_facepalm ===
+[s4_facepalm] exists, skipping
+[s4_facepalm_end] exists, skipping
+[s4_facepalm] exists, skipping
+FINISHED 1/1: ['s4_facepalm']
+[s4_facepalm] heygen exists, skipping
+=== s5_shoulder ===
+[s5_shoulder] exists, skipping
+[s5_shoulder_end] exists, skipping
+[s5_shoulder] exists, skipping
+FINISHED 1/1: ['s5_shoulder']
+[s5_shoulder] heygen exists, skipping
+CHAIN COMPLETE: 5 scene(s)
+exit=0

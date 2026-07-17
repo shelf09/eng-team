@@ -1,0 +1,3 @@
+$ python3 evil/0_chain.py  (scenes.json with name '../evil')
+invalid scene name(s): ['../evil'] (use letters/digits/_/- only)
+exit=1

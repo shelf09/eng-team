@@ -1,0 +1,9 @@
+$ CARTOON_DIR=C HEYGEN_LIPSYNC=stub_fail python3 0_chain.py --heygen
+=== s1_desk ===
+[s1_desk] exists, skipping
+[s1_desk_end] exists, skipping
+[s1_desk] exists, skipping
+FINISHED 1/1: ['s1_desk']
+stub: simulated HeyGen failure
+CHAIN STOPPED at s1_desk / heygen lipsync (exit 1)
+exit=1
