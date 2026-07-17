@@ -89,3 +89,21 @@ and rely on the architecture tripwires at first production use.
 
 Remaining ⏭️: live HeyGen round-trip only (`0_chain.py --heygen`, uploads
 clip + audio, duration-drift tripwire per architecture Risk #3).
+
+## Addendum 2 — full live runs: all scenes + HeyGen (user-authorized)
+
+- `0_chain.py` (all scenes): s1 resume-skipped; s2–s5 generated live with
+  start+end keyframes and continuity seeding, one Veo render each, zero
+  failures (qa-evidence/live_all_scenes.txt). Scene-boundary frames at the
+  s2→s3 cut verified set-consistent — the defect class that forced re-rolls
+  last cycle did not recur.
+- `0_chain.py --heygen` (all scenes): every clip's audio extracted, uploaded,
+  lip-synced, and downloaded; **all five `_heygen.mp4` outputs are exactly
+  8.000s** — architecture Risk #3 (duration drift) CLEARED
+  (qa-evidence/live_heygen_all.txt).
+- Compose verified picking `_heygen` inputs for all five scenes; deliverables:
+  `dilbert_cartoon_chain.mp4` (Veo voices) and
+  `dilbert_cartoon_chain_heygen.mp4` (HeyGen lip-sync), both 40.03s 1080x1920.
+
+**Every QA case, including all live-API cases, is now executed and passing.
+No ⏭️ remain.**

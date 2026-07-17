@@ -1,0 +1,38 @@
+$ CARTOON_DIR=build-live python3 0_chain.py --heygen   (Fri Jul 17 17:00:04 CDT 2026)
+=== s1_desk ===
+[s1_desk] exists, skipping
+[s1_desk_end] exists, skipping
+[s1_desk] exists, skipping
+FINISHED 1/1: ['s1_desk']
+lipsync 693d8cfd008f496e9b6acb841426b30c submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/build-live/clips/s1_desk_heygen.mp4
+=== s2_whiteboard ===
+[s2_whiteboard] exists, skipping
+[s2_whiteboard_end] exists, skipping
+[s2_whiteboard] exists, skipping
+FINISHED 1/1: ['s2_whiteboard']
+lipsync e36305f5ac2045d1aa9e128b6554413f submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/build-live/clips/s2_whiteboard_heygen.mp4
+=== s3_shock ===
+[s3_shock] exists, skipping
+[s3_shock_end] exists, skipping
+[s3_shock] exists, skipping
+FINISHED 1/1: ['s3_shock']
+lipsync ab9188748aec4633972901cc95f70dba submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/build-live/clips/s3_shock_heygen.mp4
+=== s4_facepalm ===
+[s4_facepalm] exists, skipping
+[s4_facepalm_end] exists, skipping
+[s4_facepalm] exists, skipping
+FINISHED 1/1: ['s4_facepalm']
+lipsync 9a07e1a35d28437f9339e179e8b61317 submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/build-live/clips/s4_facepalm_heygen.mp4
+=== s5_shoulder ===
+[s5_shoulder] exists, skipping
+[s5_shoulder_end] exists, skipping
+[s5_shoulder] exists, skipping
+FINISHED 1/1: ['s5_shoulder']
+lipsync 6b480d9fdb984962a39e0c6c095c495f submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/build-live/clips/s5_shoulder_heygen.mp4
+CHAIN COMPLETE: 5 scene(s)
+exit=0
