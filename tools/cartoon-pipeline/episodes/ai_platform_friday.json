@@ -1,0 +1,103 @@
+{
+  "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
+  "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
+  "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
+  "scenes": [
+    {
+      "name": "s1_desk",
+      "keyframe": "SCENE: The engineer sits at his desk typing at a code monitor. The boss leans over the cubicle wall from the right side with a big eager grin, about to speak. The engineer glances sideways at him, unimpressed. IMPORTANT: The background office must contain NO other people \u2014 absolutely no figure resembling the engineer anywhere. The engineer types on a clearly visible keyboard on his desk. The cubicle partition connects naturally to the wall.",
+      "end_keyframe": "SCENE (final frame, same desk setup as the attached start frame): The boss still leans over the cubicle wall, grin now expectant. The engineer has turned toward him, hands paused on the keyboard, flat skeptical stare. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame.",
+      "action": "The boss leans over the cubicle wall and says: \"Quick sync. I need the new AI platform shipped by Friday.\" The engineer keeps typing, glances at him and replies flatly: \"We started it yesterday. What's it supposed to do?\"",
+      "lines": [
+        [
+          "boss",
+          "Quick sync. I need the new AI platform shipped by Friday."
+        ],
+        [
+          "eng",
+          "We started it yesterday. What's it supposed to do?"
+        ]
+      ]
+    },
+    {
+      "name": "s2_whiteboard",
+      "keyframe": "SCENE: The boss stands center-frame gesturing proudly with both hands at a whiteboard that reads 'AI = $$$' with a rising arrow chart. The engineer sits in the left foreground, arms crossed, flat deadpan stare. ABSOLUTELY NO text anywhere except the whiteboard writing 'AI = $$$'.",
+      "end_keyframe": "SCENE (final frame, same whiteboard setup as the attached start frame): The boss holds both arms spread wide in a triumphant finish pose beside the whiteboard reading 'AI = $$$'. The engineer sits arms crossed, eyes half-lidded, utterly unimpressed. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. NO text except the whiteboard writing.",
+      "action": "The boss gestures grandly at the whiteboard and proclaims: \"It leverages AI to unlock synergy.\" The engineer, arms crossed, replies in a dry deadpan: \"That's three buzzwords in a trench coat.\"",
+      "lines": [
+        [
+          "boss",
+          "It leverages AI to unlock synergy."
+        ],
+        [
+          "eng",
+          "That's three buzzwords in a trench coat."
+        ]
+      ]
+    },
+    {
+      "name": "s3_shock",
+      "keyframe": "SCENE: Two-shot. The boss gives an enthusiastic double thumbs-up with a huge proud grin. Next to him the engineer's eyes are wide with alarm behind his glasses, hands flat on the desk, leaning forward in disbelief. IMPORTANT: Set in the SAME blue-gray glass-walled office as the other scenes \u2014 glass panel walls, blue code monitor on the desk, potted plant at right, the AI whiteboard on the wall. ABSOLUTELY NO text or headlines anywhere except the whiteboard writing.",
+      "end_keyframe": "SCENE (final frame, same two-shot setup as the attached start frame): The engineer leans far forward, palms flat on the desk, eyes huge with alarm behind his glasses, mouth pressed into a tight worried grimace. The boss's double thumbs-up droops slightly, grin faltering. BOTH MOUTHS FULLY CLOSED. Same glass-walled office, same lighting, same camera framing as the start frame. NO text except the whiteboard writing.",
+      "action": "The boss gives a double thumbs-up and beams: \"Perfect. I told the board it's already live.\" While the boss speaks, the engineer's mouth stays FIRMLY CLOSED in a worried grimace. Then the engineer's eyes go wide and he blurts: \"You told the board it's LIVE?\" \u2014 his mouth moves ONLY during his own line, and the boss's mouth is closed while the engineer speaks.",
+      "lines": [
+        [
+          "boss",
+          "Perfect. I told the board it's already live."
+        ],
+        [
+          "eng",
+          "You told the board it's LIVE?"
+        ]
+      ]
+    },
+    {
+      "name": "s4_facepalm",
+      "keyframe": "SCENE: The boss points confidently at the engineer with a smug grin. The engineer facepalms, glasses pushed up by his hand, shoulders slumped.",
+      "end_keyframe": "SCENE (final frame, same setup as the attached start frame): The engineer is in a deep facepalm, glasses pushed up by his hand, shoulders fully slumped. The boss still points at him, smug grin at maximum. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame.",
+      "action": "The boss points at the engineer and announces cheerfully: \"So I cut your team to fund the AI.\" The engineer facepalms and groans: \"My team WAS the AI.\"",
+      "lines": [
+        [
+          "boss",
+          "So I cut your team to fund the AI."
+        ],
+        [
+          "eng",
+          "My team WAS the AI."
+        ]
+      ]
+    },
+    {
+      "name": "s5_shoulder",
+      "keyframe": "SCENE: The boss stands behind the seated engineer with one hand on the engineer's shoulder, beaming with pride. The engineer stares straight into the camera, hollow-eyed, coffee mug in hand.",
+      "end_keyframe": "SCENE (final frame, same setup as the attached start frame): The boss stands behind the seated engineer, hand on his shoulder, beaming with pride, mouth closed. The engineer sips from his coffee mug, MOUTH CLOSED ON THE CUP, staring hollow-eyed straight into the camera. Same office, same lighting, same camera framing as the start frame.",
+      "action": "The boss squeezes the engineer's shoulder proudly and says: \"Which is why you're promoted. You're the whole department now.\" The engineer stares into the camera and asks flatly: \"Do I get a raise?\" The boss keeps his mouth moving through his ENTIRE final line: \"No. But you get synergy.\" and stays fully in frame. Only after the boss finishes does the engineer silently sip his coffee WITH HIS MOUTH CLOSED on the cup, dead inside. Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "boss",
+          "Which is why you're promoted. You're the whole department now."
+        ],
+        [
+          "eng",
+          "Do I get a raise?"
+        ],
+        [
+          "boss",
+          "No. But you get synergy."
+        ]
+      ],
+      "delivery": "Deliver this extremely fast, clipped and rapid-fire, no pauses. "
+    }
+  ],
+  "tts": {
+    "model": "gemini-2.5-flash-preview-tts",
+    "voices": {
+      "boss": "Fenrir",
+      "eng": "Iapetus"
+    },
+    "styles": {
+      "boss": "Say briskly and energetically, in a smug corporate-executive baritone brimming with fake enthusiasm and total unearned confidence: ",
+      "eng": "Say at a quick clip, in a flat, tired, deadpan monotone, utterly unimpressed: "
+    }
+  }
+}

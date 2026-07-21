@@ -32,6 +32,14 @@ Fully-animated cartoon shorts from a dialogue script. Stages:
                    character's mouth moves (e.g. the listener's shocked-open
                    mouth flaps through the speaker's line). Samples frames
                    across each line and asks Gemini vision whose mouth moves.
+7_episode.py       EPISODE WRITER: Gemini writes a new 5-scene episode in the
+                   show's genre — satire / dry humor about the corporate world
+                   constantly making stupid decisions. Only the scenes are
+                   generated; style, cast, and tts config are copied from the
+                   current scenes.json. Saves episodes/<slug>.json and
+                   activates it as scenes.json (validated: scene-name guard,
+                   verbatim lines in action prompts, <=26 spoken words/scene).
+                   Topic as args, or none to let it invent the stupid decision.
 dub_lib.py         Shared audio/alignment utilities for stages 4-5.
 ```
 
