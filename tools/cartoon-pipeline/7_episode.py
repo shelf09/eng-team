@@ -142,7 +142,8 @@ def main(argv=None):
         sys.exit("episode generation failed twice — try a different topic")
 
     seed = json.load(open(os.path.join(HERE, "scenes.json")))
-    full = {"style_image": seed["style_image"], "style_video": seed["style_video"],
+    full = {"episode": ep["slug"],
+            "style_image": seed["style_image"], "style_video": seed["style_video"],
             "voices": seed["voices"], "scenes": ep["scenes"], "tts": seed["tts"]}
     epdir = os.path.join(HERE, "episodes")
     os.makedirs(epdir, exist_ok=True)
@@ -154,7 +155,8 @@ def main(argv=None):
         print(f"[{sc['name']}]")
         for who, text in sc["lines"]:
             print(f"  {who:4}: {text}")
-    print("next: python3 0_chain.py  (fresh CARTOON_DIR recommended)", flush=True)
+    print("next: python3 0_chain.py  (renders into its own builds/<date>_"
+          f"{ep['slug']} run dir)", flush=True)
     return path
 
 

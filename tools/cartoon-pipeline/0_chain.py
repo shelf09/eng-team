@@ -4,6 +4,10 @@ lip-sync, one scene at a time, stopping at the first failure so a bad scene
 costs one clip, not the batch. Rerunning resumes: completed work is skipped by
 the stages' own exists-on-disk checks.
 
+Each episode renders into its own dated run folder:
+$CARTOON_DIR if set, else builds/<YYYYMMDD>_<episode-slug>/ (the newest
+existing builds/*_<slug>/ is reused so reruns resume instead of re-spending).
+
 Usage: python3 0_chain.py [--heygen] [scene ...]
   --heygen  after each clip, re-animate its lips with HeyGen against the
             scene's dubbed audio (clips/<scene>_dub.mp4) when present, else the
@@ -12,7 +16,7 @@ Usage: python3 0_chain.py [--heygen] [scene ...]
             (3_compose.sh prefers these; delete one to re-roll it).
 Reuses the hardened HeyGen client in .claude/skills/clone-video-creator/
 video-gen/scripts/heygen_lipsync.py (override path via $HEYGEN_LIPSYNC)."""
-import argparse, json, os, re, subprocess, sys
+import argparse, glob, json, os, re, subprocess, sys, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.environ.get("CARTOON_DIR", os.path.join(HERE, "build"))
@@ -22,8 +26,19 @@ HEYGEN_SCRIPT = os.environ.get("HEYGEN_LIPSYNC", os.path.join(
 
 cfg = json.load(open(os.path.join(HERE, "scenes.json")))
 
+def resolve_base():
+    """$CARTOON_DIR wins; else the newest builds/*_<slug> run dir; else a new
+    dated one — new episode or new day means a new folder, reruns resume."""
+    if os.environ.get("CARTOON_DIR"):
+        return os.environ["CARTOON_DIR"]
+    slug = cfg.get("episode", "episode")
+    prior = sorted(glob.glob(os.path.join(HERE, "builds", f"*_{slug}")))
+    if prior:
+        return prior[-1]
+    return os.path.join(HERE, "builds", time.strftime("%Y%m%d") + "_" + slug)
+
 def run(argv, stage, scene):
-    r = subprocess.run(argv)
+    r = subprocess.run(argv, env=dict(os.environ, CARTOON_DIR=BASE))
     if r.returncode != 0:
         sys.exit(f"CHAIN STOPPED at {scene} / {stage} (exit {r.returncode})")
 
@@ -50,6 +65,10 @@ def main(argv=None):
                     help="lip-sync each clip with HeyGen (uploads clip + audio)")
     ap.add_argument("scenes", nargs="*", help="scene names (default: all)")
     args = ap.parse_args(argv)
+
+    global BASE
+    BASE = resolve_base()
+    print(f"run dir: {BASE}", flush=True)
 
     # scene names become file paths and upload sources (same guard as 3_compose.sh)
     bad = [s["name"] for s in cfg["scenes"]

@@ -4,7 +4,17 @@
 # (optional cover.png/title.png/end.png in $CARTOON_DIR are included if present).
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
-BASE="${CARTOON_DIR:-$HERE/build}"
+# same run-dir resolution as 0_chain.py: $CARTOON_DIR, else the newest
+# builds/*_<episode-slug> run dir, else the legacy build/ dir
+BASE="${CARTOON_DIR:-$(python3 - "$HERE" <<'PY'
+import glob, json, os, sys
+here = sys.argv[1]
+slug = json.load(open(os.path.join(here, "scenes.json"))).get("episode", "episode")
+prior = sorted(glob.glob(os.path.join(here, "builds", "*_" + slug)))
+print(prior[-1] if prior else os.path.join(here, "build"))
+PY
+)}"
+echo "run dir: $BASE"
 OUT="${1:?usage: 3_compose.sh out.mp4}"
 VE="-c:v libx264 -pix_fmt yuv420p -r 30 -c:a aac -ar 44100 -ac 2 -b:a 192k"
 cd "$BASE"

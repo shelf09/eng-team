@@ -73,6 +73,8 @@ class EpisodeGeneratorTests(unittest.TestCase):
         episode = json.loads((self.base / "episodes" / "rto_no_desks.json").read_text())
         active = json.loads((self.base / "scenes.json").read_text())
         self.assertEqual(episode, active)
+        # the slug is stamped so the chain can name the run folder
+        self.assertEqual(active["episode"], "rto_no_desks")
         # locked identity comes from the seed file, not the model
         self.assertEqual(active["style_image"], "SI")
         self.assertEqual(active["style_video"], "SV")

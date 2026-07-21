@@ -1,6 +1,7 @@
 import importlib.util
 import os
 import tempfile
+import time
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -54,8 +55,9 @@ class ChainOrderingTests(unittest.TestCase):
             self.calls.append(call_argv)
             return result(rc(call_argv))
 
-        with mock.patch.object(self.module.subprocess, "run", fake_run):
-            self.module.main(argv)
+        with mock.patch.dict(os.environ, {"CARTOON_DIR": self.tmp.name}, clear=False):
+            with mock.patch.object(self.module.subprocess, "run", fake_run):
+                self.module.main(argv)
 
     def test_scene_runs_to_completion_before_next_scene_starts(self):
         self.run_chain([])
@@ -94,6 +96,49 @@ class ChainOrderingTests(unittest.TestCase):
         self.assertEqual(self.calls, [])
 
 
+class ChainRunDirTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.module = load_script({})
+        self.module.HERE = self.tmp.name
+        self.module.cfg = {"episode": "ep1", "scenes": [{"name": "a", "keyframe": "K"}]}
+        self.calls = []
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def run_chain(self, argv, extra_env=None):
+        def fake_run(call_argv, **kwargs):
+            self.calls.append((call_argv, kwargs))
+            return result(0)
+
+        with mock.patch.dict(os.environ, extra_env or {}, clear=False):
+            if not (extra_env and "CARTOON_DIR" in extra_env):
+                os.environ.pop("CARTOON_DIR", None)
+            with mock.patch.object(self.module.subprocess, "run", fake_run):
+                self.module.main(argv)
+
+    def test_default_run_dir_is_dated_and_named_after_episode(self):
+        self.run_chain([])
+        expected = os.path.join(
+            self.tmp.name, "builds", time.strftime("%Y%m%d") + "_ep1"
+        )
+        self.assertEqual(self.module.BASE, expected)
+        # every stage subprocess inherits the resolved dir
+        for _, kwargs in self.calls:
+            self.assertEqual(kwargs["env"]["CARTOON_DIR"], expected)
+
+    def test_existing_run_dir_for_the_episode_is_reused(self):
+        prior = Path(self.tmp.name) / "builds" / "20240101_ep1"
+        prior.mkdir(parents=True)
+        self.run_chain([])
+        self.assertEqual(self.module.BASE, str(prior))
+
+    def test_explicit_cartoon_dir_still_wins(self):
+        self.run_chain([], extra_env={"CARTOON_DIR": "/explicit/dir"})
+        self.assertEqual(self.module.BASE, "/explicit/dir")
+
+
 class ChainHeygenTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -113,7 +158,9 @@ class ChainHeygenTests(unittest.TestCase):
                 Path(call_argv[call_argv.index("--out") + 1]).write_bytes(b"lipsynced")
             return result(0)
 
-        env = {"HEYGEN_API_KEY": key} if key else {}
+        env = {"CARTOON_DIR": self.tmp.name}
+        if key:
+            env["HEYGEN_API_KEY"] = key
         with mock.patch.dict(os.environ, env, clear=False):
             if not key:
                 os.environ.pop("HEYGEN_API_KEY", None)

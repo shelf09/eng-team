@@ -6,7 +6,11 @@ Fully-animated cartoon shorts from a dialogue script. Stages:
 0_chain.py         THE CHAIN: runs stages 1 -> 2 -> (optional HeyGen lip-sync)
                    one scene at a time, stopping at the first failure — a bad
                    scene costs one $1.20 clip, not the batch. Resumable; scene
-                   names as args re-run just those scenes.
+                   names as args re-run just those scenes. Every episode gets
+                   its own dated run folder: builds/<YYYYMMDD>_<episode>/
+                   (newest existing folder for the episode is reused so reruns
+                   resume; $CARTOON_DIR overrides). 3_compose.sh resolves the
+                   same folder, so render + stitch need no env setup.
 1_nano_scenes.py   Nano Banana (gemini-2.5-flash-image) generates 4-5 scene
                    keyframes, seeded with reference art so the cast stays
                    consistent across scenes. Scenes with an "end_keyframe"
@@ -49,11 +53,14 @@ dub_lib.py         Shared audio/alignment utilities for stages 4-5.
 
 ## Usage
 ```bash
-export CARTOON_DIR=./build        # working dir (default: ./build next to scripts)
+python3 7_episode.py [topic]      # optional: write + activate a new episode
 python3 0_chain.py                # keyframes -> Veo per scene, fail-fast
 python3 0_chain.py --heygen       # ... plus HeyGen lip-sync per clip (uploads!)
 bash 3_compose.sh out.mp4
 ```
+Runs land in `builds/<YYYYMMDD>_<episode>/` automatically (set `CARTOON_DIR`
+to override; standalone stage scripts still default to `./build`, so export
+the printed run dir when invoking a stage directly).
 Or run stages batch-style as before (`python3 1_nano_scenes.py`, then
 `python3 2_veo_scenes.py`); every stage also takes scene names to re-run just
 those scenes (e.g. `python3 0_chain.py s3_shock`).
