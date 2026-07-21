@@ -1,0 +1,44 @@
+$ python3 0_chain.py   (veo-3.1-fast default, Mon Jul 20 21:22:20 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s1_dinosaurs ===
+[s1_dinosaurs] exists, skipping
+[s1_dinosaurs_end] exists, skipping
+[s1_dinosaurs] op models/veo-3.1-fast-generate-preview/operations/5fr39djxluug
+[   0s] pending: ['s1_dinosaurs']
+[  32s] pending: ['s1_dinosaurs']
+[s1_dinosaurs] DONE 1118 KB
+FINISHED 1/1: ['s1_dinosaurs']
+=== s2_lawsuit ===
+[s2_lawsuit] saved
+[s2_lawsuit_end] saved
+[s2_lawsuit] op models/veo-3.1-fast-generate-preview/operations/cegn0ngt860r
+[   0s] pending: ['s2_lawsuit']
+[  32s] pending: ['s2_lawsuit']
+[s2_lawsuit] DONE 1678 KB
+FINISHED 1/1: ['s2_lawsuit']
+=== s3_natives ===
+[s3_natives] saved
+[s3_natives_end] saved
+[s3_natives] op models/veo-3.1-fast-generate-preview/operations/0jzakjj5yp3v
+[   0s] pending: ['s3_natives']
+[  32s] pending: ['s3_natives']
+[s3_natives] DONE 1846 KB
+FINISHED 1/1: ['s3_natives']
+=== s4_training ===
+[s4_training] saved
+[s4_training_end] saved
+[s4_training] op models/veo-3.1-fast-generate-preview/operations/cvixxzey7sfl
+[   0s] pending: ['s4_training']
+[  32s] pending: ['s4_training']
+[s4_training] DONE 1111 KB
+FINISHED 1/1: ['s4_training']
+=== s5_terminated ===
+[s5_terminated] saved
+[s5_terminated_end] saved
+[s5_terminated] op models/veo-3.1-fast-generate-preview/operations/gkxqu1nt5g6z
+[   0s] pending: ['s5_terminated']
+[  32s] pending: ['s5_terminated']
+[s5_terminated] DONE 1889 KB
+FINISHED 1/1: ['s5_terminated']
+CHAIN COMPLETE: 5 scene(s) (heygen skipped)
+exit=0

@@ -35,9 +35,10 @@ def submit(name, prompt):
     if os.path.exists(endpath):
         end = base64.b64encode(open(endpath, "rb").read()).decode()
         inst["lastFrame"] = {"bytesBase64Encoded": end, "mimeType": "image/png"}
-    body = {"instances": [inst],
-            "parameters": {"aspectRatio": "9:16",
-                           "negativePrompt": "subtitles, captions, on-screen text, watermark, photorealistic"}}
+    params = {"aspectRatio": "9:16"}
+    if "lite" not in MODEL:  # veo-3.1-lite rejects negativePrompt (HTTP 400)
+        params["negativePrompt"] = "subtitles, captions, on-screen text, watermark, photorealistic"
+    body = {"instances": [inst], "parameters": params}
     for attempt in range(4):
         try:
             resp = jreq(f"{ROOT}/models/{MODEL}:predictLongRunning?key={KEY}", body)

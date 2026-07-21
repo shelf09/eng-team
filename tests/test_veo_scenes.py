@@ -68,6 +68,27 @@ class VeoLastFrameTests(unittest.TestCase):
         )
 
 
+class VeoLiteModelTests(unittest.TestCase):
+    def test_lite_model_omits_unsupported_negative_prompt(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "keyframes").mkdir()
+            (Path(tmp) / "keyframes" / "s.png").write_bytes(b"start")
+            module = load_script({
+                "CARTOON_DIR": tmp,
+                "GEMINI_API_KEY": "test-key",
+                "VEO_MODEL": "veo-3.1-lite-generate-preview",
+            })
+            captured = {}
+
+            def fake_urlopen(req, timeout=None):
+                captured["body"] = json.loads(req.data)
+                return io.BytesIO(json.dumps({"name": "operations/op1"}).encode())
+
+            with mock.patch.object(module.urllib.request, "urlopen", fake_urlopen):
+                module.submit("s", "p")
+            self.assertNotIn("negativePrompt", captured["body"]["parameters"])
+
+
 class VeoSceneFilterTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

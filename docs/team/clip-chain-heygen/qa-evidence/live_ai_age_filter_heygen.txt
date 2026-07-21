@@ -1,0 +1,52 @@
+$ python3 0_chain.py --heygen   (Mon Jul 20 21:28:11 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s1_dinosaurs ===
+[s1_dinosaurs] exists, skipping
+[s1_dinosaurs_end] exists, skipping
+[s1_dinosaurs] exists, skipping
+FINISHED 1/1: ['s1_dinosaurs']
+lipsync 417dd1d4c35443d5bcdab1bf42afea49 submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s1_dinosaurs_heygen.mp4
+=== s2_lawsuit ===
+[s2_lawsuit] exists, skipping
+[s2_lawsuit_end] exists, skipping
+[s2_lawsuit] exists, skipping
+FINISHED 1/1: ['s2_lawsuit']
+lipsync bed84b01016b49b784140d2feb5a68dc submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s2_lawsuit_heygen.mp4
+=== s3_natives ===
+[s3_natives] exists, skipping
+[s3_natives_end] exists, skipping
+[s3_natives] exists, skipping
+FINISHED 1/1: ['s3_natives']
+lipsync 550523e9743f4749b4cd1bfc7d58fbd2 submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s3_natives_heygen.mp4
+=== s4_training ===
+[s4_training] exists, skipping
+[s4_training_end] exists, skipping
+[s4_training] exists, skipping
+FINISHED 1/1: ['s4_training']
+lipsync a3936812334a43fe9f7f247691742744 submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s4_training_heygen.mp4
+=== s5_terminated ===
+[s5_terminated] exists, skipping
+[s5_terminated_end] exists, skipping
+[s5_terminated] exists, skipping
+FINISHED 1/1: ['s5_terminated']
+lipsync 362304673156447bb7c53358089bb427 submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s5_terminated_heygen.mp4
+CHAIN COMPLETE: 5 scene(s)
+exit=0
+$ re-roll: python3 0_chain.py --heygen s5_terminated   (Mon Jul 20 21:36:30 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s5_terminated ===
+[s5_terminated] saved
+[s5_terminated_end] saved
+[s5_terminated] op models/veo-3.1-fast-generate-preview/operations/ho7m7wi6uli3
+[   0s] pending: ['s5_terminated']
+[s5_terminated] DONE 1648 KB
+FINISHED 1/1: ['s5_terminated']
+lipsync 87f274b10a2a4296ae660fa5c5bf78f8 submitted; polling ...
+/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s5_terminated_heygen.mp4
+CHAIN COMPLETE: 1 scene(s)
+exit=0
