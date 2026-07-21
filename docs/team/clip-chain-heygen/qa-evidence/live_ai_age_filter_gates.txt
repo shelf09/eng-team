@@ -1,0 +1,163 @@
+$ 5_sync_check.py   (Mon Jul 20 22:00:13 CDT 2026)
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+[s1_dinosaurs] TRANSCRIPT MISSING WORDS: ['set']
+s1_dinosaurs     0   0.02- 4.20   0.00- 4.20   +0.02    +0.00   100%   1.12  PASS
+s1_dinosaurs     1   4.34- 7.14   4.34- 7.20   +0.00    -0.06    98%   0.90  PASS
+s2_lawsuit       0   0.02- 3.88   0.00- 3.92   +0.02    -0.04    98%   0.91  PASS
+s2_lawsuit       1   4.06- 7.46   4.06- 7.58   +0.00    -0.12    97%   1.22  PASS
+s3_natives       0   0.02- 2.66   0.00- 2.70   +0.02    -0.04    98%   1.13  PASS
+s3_natives       1   3.28- 7.20   3.28- 7.38   +0.00    -0.18    96%   1.45  PASS
+s4_training      0   0.04- 3.28   0.00- 3.38   +0.04    -0.10    96%   1.16  PASS
+s4_training      1   3.68- 7.40   3.68- 7.58   +0.00    -0.18    95%   1.28  PASS
+s5_terminated    0   0.02- 5.62   0.00- 5.66   +0.02    -0.04    99%   1.40  PASS
+s5_terminated    1   6.30- 6.62   6.28- 6.66   +0.02    -0.04    84%   1.32  FAIL
+s5_terminated    2   7.18- 7.46   7.18- 7.44   +0.00    +0.02   100%   1.27  PASS
+
+2 check(s) FAIL
+sync exit=1
+
+$ 6_speaker_check.py
+scene            ln spk   boss_mouth  eng_mouth   verdict
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/6_speaker_check.py", line 111, in <module>
+    main()
+    ~~~~^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/6_speaker_check.py", line 101, in main
+    strip = strip_for_line(clip, fs, fe, f"{tmp}/_spk_{name}_{i}.png")
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/6_speaker_check.py", line 30, in strip_for_line
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+speaker exit=1
+$ re-roll takes: 4_dub_voices.py s1_dinosaurs s5_terminated   (Mon Jul 20 22:01:05 CDT 2026)
+    line0 [boss] fast speech  0.00- 4.20 (flap 0.00-4.20, tempo 1.12)
+  tts s1_dinosaurs_1 [eng] 4.33s
+    line1 [eng ] speech  4.34- 7.20 (flap 4.34-7.20, tempo 1.31)
+[s1_dinosaurs] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s1_dinosaurs_dub.mp4
+    line0 [eng ] measured speech  0.00- 5.66 (flap 0.00-5.66, tempo 1.40)
+  tts s5_terminated_1 [boss] 1.21s
+  tts s5_terminated_1_fast [boss] 0.61s
+    line1 [boss] speech  6.28- 6.71 (flap 6.28-6.66, tempo 1.45)
+    line2 [eng ] speech  7.18- 7.48 (flap 7.18-7.44, tempo 1.27)
+[s5_terminated] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s5_terminated_dub.mp4
+done — now run 5_sync_check.py
+exit=0
+
+$ 5_sync_check.py (rerun)
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+[s1_dinosaurs] TRANSCRIPT MISSING WORDS: ['set']
+s1_dinosaurs     0   0.02- 4.20   0.00- 4.20   +0.02    +0.00   100%   1.12  PASS
+s1_dinosaurs     1   4.34- 7.12   4.34- 7.20   +0.00    -0.08    97%   1.31  PASS
+s2_lawsuit       0   0.02- 3.88   0.00- 3.92   +0.02    -0.04    98%   0.91  PASS
+s2_lawsuit       1   4.06- 7.46   4.06- 7.58   +0.00    -0.12    97%   1.22  PASS
+s3_natives       0   0.02- 2.66   0.00- 2.70   +0.02    -0.04    98%   1.13  PASS
+s3_natives       1   3.28- 7.20   3.28- 7.38   +0.00    -0.18    96%   1.45  PASS
+s4_training      0   0.04- 3.28   0.00- 3.38   +0.04    -0.10    96%   1.16  PASS
+s4_training      1   3.68- 7.40   3.68- 7.58   +0.00    -0.18    95%   1.28  PASS
+s5_terminated    0   0.02- 5.62   0.00- 5.66   +0.02    -0.04    99%   1.40  PASS
+s5_terminated    1   6.28- 6.72   6.28- 6.66   +0.00    +0.06   100%   1.45  PASS
+s5_terminated    2   7.18- 7.48   7.18- 7.44   +0.00    +0.04   100%   1.27  PASS
+
+1 check(s) FAIL
+sync exit=1
+$ 6_speaker_check.py (system python3)   (Mon Jul 20 22:01:50 CDT 2026)
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_dinosaurs     0  boss  moving      still       PASS  The Boss shows active speaking mouth shapes throughout the s
+s1_dinosaurs     1  eng   still       moving      PASS  The engineer speaks with his mouth open in five frames while
+s2_lawsuit       0  eng   moving      moving      FAIL  Both characters have their mouths open for three frames each
+s2_lawsuit       1  boss  moving      still       PASS  The boss speaks with his mouth changing shapes while the eng
+s3_natives       0  eng   still       moving      PASS  The engineer shows dynamic mouth movement and shape changes 
+s3_natives       1  boss  moving      still       PASS  The boss speaks with changing mouth shapes across several fr
+s4_training      0  eng   still       moving      PASS  The engineer mouth moves through various open shapes while t
+s4_training      1  boss  moving      still       PASS  The boss is actively speaking with visible mouth shape chang
+s5_terminated    0  eng   still       moving      PASS  The engineer speaks with his mouth open in frames 2 through 
+s5_terminated    1  boss  still       moving      FAIL  The engineer is clearly speaking while the boss has his mout
+s5_terminated    2  eng   moving      still       FAIL  The boss is speaking across all frames while the engineer ke
+
+3 line(s) FAIL
+speaker exit=1
+$ re-roll s2+s5 with mouth-ownership prompts   (Mon Jul 20 22:04:04 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s2_lawsuit ===
+[s2_lawsuit] exists, skipping
+[s2_lawsuit_end] exists, skipping
+[s2_lawsuit] op models/veo-3.1-fast-generate-preview/operations/ps146zaws0yh
+[   0s] pending: ['s2_lawsuit']
+[  32s] pending: ['s2_lawsuit']
+[s2_lawsuit] DONE 1536 KB
+FINISHED 1/1: ['s2_lawsuit']
+=== s5_terminated ===
+[s5_terminated] exists, skipping
+[s5_terminated_end] exists, skipping
+[s5_terminated] op models/veo-3.1-fast-generate-preview/operations/luu3nyqb7xup
+[   0s] pending: ['s5_terminated']
+[  32s] pending: ['s5_terminated']
+[s5_terminated] DONE 1302 KB
+FINISHED 1/1: ['s5_terminated']
+CHAIN COMPLETE: 2 scene(s) (heygen skipped)
+-- re-dub s2+s5
+[s2_lawsuit] flap windows: [[np.float64(0.0), np.float64(4.0)], [np.float64(4.12), np.float64(7.6)]]
+    line0 [eng ] fast speech  0.00- 3.98 (flap 0.00-4.00, tempo 0.90)
+    line1 [boss] fast speech  4.12- 7.60 (flap 4.12-7.60, tempo 1.24)
+[s2_lawsuit] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s2_lawsuit_dub.mp4
+[s5_terminated] flap windows: [[np.float64(0.0), np.float64(5.44)], [np.float64(5.98), np.float64(6.32)], [np.float64(6.98), np.float64(7.32)]]
+    line0 [eng ] measured speech  0.00- 5.45 (flap 0.00-5.44, tempo 1.45)
+    line1 [boss] fast speech  5.98- 6.27 (flap 5.98-6.32, tempo 0.90)
+    line2 [eng ] speech  6.98- 7.32 (flap 6.98-7.32, tempo 1.12)
+[s5_terminated] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s5_terminated_dub.mp4
+done — now run 5_sync_check.py
+-- sync gate
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+[s1_dinosaurs] TRANSCRIPT MISSING WORDS: ['set']
+s1_dinosaurs     0   0.02- 4.20   0.00- 4.20   +0.02    +0.00   100%   1.12  PASS
+s1_dinosaurs     1   4.34- 7.12   4.34- 7.20   +0.00    -0.08    97%   1.31  PASS
+s2_lawsuit       0   0.02- 3.94   0.00- 4.00   +0.02    -0.06    98%   0.90  PASS
+s2_lawsuit       1   4.12- 7.50   4.12- 7.60   +0.00    -0.10    97%   1.24  PASS
+s3_natives       0   0.02- 2.66   0.00- 2.70   +0.02    -0.04    98%   1.13  PASS
+s3_natives       1   3.28- 7.20   3.28- 7.38   +0.00    -0.18    96%   1.45  PASS
+s4_training      0   0.04- 3.28   0.00- 3.38   +0.04    -0.10    96%   1.16  PASS
+s4_training      1   3.68- 7.40   3.68- 7.58   +0.00    -0.18    95%   1.28  PASS
+s5_terminated    0   0.02- 5.40   0.00- 5.44   +0.02    -0.04    99%   1.45  PASS
+s5_terminated    1   5.98- 6.26   5.98- 6.32   +0.00    -0.06    82%   0.90  FAIL
+s5_terminated    2   6.98- 7.32   6.98- 7.32   +0.00    +0.00   100%   1.12  PASS
+
+2 check(s) FAIL
+sync exit=1
+-- speaker gate
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_dinosaurs     0  boss  moving      still       PASS  The boss is speaking with changing mouth shapes across multi
+s1_dinosaurs     1  eng   still       moving      PASS  The engineer speaks with an open mouth across the first five
+s2_lawsuit       0  eng   still       moving      PASS  ENG exhibits varied open mouth shapes across multiple frames
+s2_lawsuit       1  boss  moving      still       PASS  The boss speaks with shifting mouth shapes across frames whi
+s3_natives       0  eng   still       moving      PASS  The engineer is actively speaking while the boss remains in 
+s3_natives       1  boss  moving      still       PASS  The boss is depicted speaking with multiple mouth shape chan
+s4_training      0  eng   still       moving      PASS  The engineer shows active mouth movement while the boss rema
+s4_training      1  boss  moving      still       PASS  The boss actively speaks with open mouth shapes in multiple 
+s5_terminated    0  eng   still       moving      PASS  The engineer speaks in the first three frames while the boss
+s5_terminated    1  boss  still       moving      FAIL  The engineer is speaking with an open mouth in all frames wh
+s5_terminated    2  eng   moving      still       FAIL  The boss is speaking in all frames while the mouth of the en
+
+2 line(s) FAIL
+speaker exit=1
+$ s5 rewrite roll   (Mon Jul 20 22:09:52 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s5_terminated ===
+[s5_terminated] exists, skipping
+[s5_terminated_end] exists, skipping
+[s5_terminated] submit HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+[s5_terminated] submit HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+[s5_terminated] submit HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+[s5_terminated] submit HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+FINISHED 0/1: []
+CHAIN STOPPED at s5_terminated / veo (exit 1)

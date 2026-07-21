@@ -1,0 +1,114 @@
+$ 4_dub_voices.py (locked cast voices, all scenes)   (Mon Jul 20 21:52:38 CDT 2026)
+[s1_dinosaurs] flap windows: [[np.float64(0.0), np.float64(4.2)], [np.float64(4.34), np.float64(7.2)]]
+  tts s1_dinosaurs_0 [boss] 7.25s
+  tts s1_dinosaurs_0_fast [boss] 5.33s
+    line0 [boss] fast speech  0.00- 4.20 (flap 0.00-4.20, tempo 1.12)
+  tts s1_dinosaurs_1 [eng] 4.29s
+    s1_dinosaurs_1: take is missing ['you'] — re-rolling
+  tts s1_dinosaurs_1 [eng] 4.81s
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 197, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 149, in dub_scene
+    fw = valid_take(model_holder, f"{name}_{i}", who, text, delivery, "fast")
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 120, in valid_take
+    wav = tts(line_id, who, text, delivery, pace)
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 66, in tts
+    raise RuntimeError(f"{line_id}: no audio in TTS response: {str(resp)[:300]}")
+RuntimeError: s1_dinosaurs_1: no audio in TTS response: {'candidates': [{'finishReason': 'OTHER', 'index': 0}], 'usageMetadata': {'promptTokenCount': 55, 'totalTokenCount': 55, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 55}], 'serviceTier': 'standard'}, 'modelVersion': 'gemini-2.5-flash-preview-tts', 'responseId': 'Dd9eaoq7HP-T-8YPkPu_mAY
+exit=1
+$ resume dub   (Mon Jul 20 21:53:20 CDT 2026)
+    line0 [boss] fast speech  0.00- 4.20 (flap 0.00-4.20, tempo 1.12)
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 197, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 149, in dub_scene
+    fw = valid_take(model_holder, f"{name}_{i}", who, text, delivery, "fast")
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 120, in valid_take
+    wav = tts(line_id, who, text, delivery, pace)
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 66, in tts
+    raise RuntimeError(f"{line_id}: no audio in TTS response: {str(resp)[:300]}")
+RuntimeError: s1_dinosaurs_1: no audio in TTS response: {'candidates': [{'finishReason': 'OTHER', 'index': 0}], 'usageMetadata': {'promptTokenCount': 55, 'totalTokenCount': 55, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 55}], 'serviceTier': 'standard'}, 'modelVersion': 'gemini-2.5-flash-preview-tts', 'responseId': 'JN9easqjCOG9jrEPmO3qWQ'
+exit=1
+$ resume dub (2)   (Mon Jul 20 21:54:24 CDT 2026)
+    line0 [boss] fast speech  0.00- 4.20 (flap 0.00-4.20, tempo 1.12)
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 197, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 149, in dub_scene
+    fw = valid_take(model_holder, f"{name}_{i}", who, text, delivery, "fast")
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 120, in valid_take
+    wav = tts(line_id, who, text, delivery, pace)
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 66, in tts
+    raise RuntimeError(f"{line_id}: no audio in TTS response: {str(resp)[:300]}")
+RuntimeError: s1_dinosaurs_1: no audio in TTS response: {'candidates': [{'finishReason': 'OTHER', 'index': 0}], 'usageMetadata': {'promptTokenCount': 55, 'totalTokenCount': 55, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 55}], 'serviceTier': 'standard'}, 'modelVersion': 'gemini-2.5-flash-preview-tts', 'responseId': 'ZN9ear-2EIHpjrEP6JGCsAY
+exit=1
+$ resume dub (3, no-audio takes excluded)   (Mon Jul 20 21:56:56 CDT 2026)
+    line0 [boss] fast speech  0.00- 4.20 (flap 0.00-4.20, tempo 1.12)
+  tts s1_dinosaurs_1_fast [eng] 3.05s
+    line1 [eng ] fast speech  4.34- 7.16 (flap 4.34-7.20, tempo 0.90)
+[s1_dinosaurs] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s1_dinosaurs_dub.mp4
+[s2_lawsuit] flap windows: [[np.float64(0.0), np.float64(3.92)], [np.float64(4.06), np.float64(7.58)]]
+  tts s2_lawsuit_0 [eng] 6.45s
+  tts s2_lawsuit_0_fast [eng] 3.61s
+    s2_lawsuit_0_fast: take is missing ['age', 'is'] — re-rolling
+  tts s2_lawsuit_0_fast [eng] 4.29s
+    s2_lawsuit_0_fast: take is missing ['is'] — EXCLUDED
+    line0 [eng ] speech  0.00- 4.00 (flap 0.00-3.92, tempo 1.46)
+  tts s2_lawsuit_1 [boss] 5.61s
+  tts s2_lawsuit_1_fast [boss] 4.73s
+    line1 [boss] fast speech  4.08- 7.58 (flap 4.06-7.58, tempo 1.23)
+[s2_lawsuit] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s2_lawsuit_dub.mp4
+[s3_natives] flap windows: [[np.float64(0.0), np.float64(2.7)], [np.float64(3.28), np.float64(7.38)]]
+  tts s3_natives_0 [eng] 3.45s
+    s3_natives_0: take is missing ['fifty'] — re-rolling
+  tts s3_natives_0 [eng] 4.21s
+    s3_natives_0: take is missing ['fifty', 'in', 'the'] — EXCLUDED
+  tts s3_natives_0_fast [eng] 2.89s
+    s3_natives_0_fast: take is missing ['fifty', 'in', 'the'] — re-rolling
+  tts s3_natives_0_fast [eng] 2.77s
+    s3_natives_0_fast: take is missing ['fifty'] — EXCLUDED
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 204, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 165, in dub_scene
+    raise RuntimeError(f"{name} line {i}: every TTS take dropped words — "
+                       f"try rewording the line or re-running")
+RuntimeError: s3_natives line 0: every TTS take dropped words — try rewording the line or re-running
+exit=1
+$ resume dub (4, digit-word normalization)   (Mon Jul 20 21:58:54 CDT 2026)
+    line0 [boss] fast speech  0.00- 4.20 (flap 0.00-4.20, tempo 1.12)
+    line1 [eng ] fast speech  4.34- 7.16 (flap 4.34-7.20, tempo 0.90)
+[s1_dinosaurs] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s1_dinosaurs_dub.mp4
+  tts s2_lawsuit_0_fast [eng] 4.09s
+    line0 [eng ] fast speech  0.00- 3.92 (flap 0.00-3.92, tempo 0.91)
+    line1 [boss] fast speech  4.06- 7.58 (flap 4.06-7.58, tempo 1.22)
+[s2_lawsuit] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s2_lawsuit_dub.mp4
+  tts s3_natives_0 [eng] 3.33s
+    line0 [eng ] speech  0.00- 2.70 (flap 0.00-2.70, tempo 1.13)
+  tts s3_natives_1 [boss] 6.57s
+    line1 [boss] speech  3.28- 7.38 (flap 3.28-7.38, tempo 1.45)
+[s3_natives] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s3_natives_dub.mp4
+[s4_training] flap windows: [[np.float64(0.0), np.float64(3.38)], [np.float64(3.68), np.float64(7.58)]]
+  tts s4_training_0 [eng] 4.37s
+    line0 [eng ] speech  0.00- 3.38 (flap 0.00-3.38, tempo 1.16)
+  tts s4_training_1 [boss] 6.21s
+  tts s4_training_1_fast [boss] 5.45s
+    line1 [boss] fast speech  3.68- 7.58 (flap 3.68-7.58, tempo 1.28)
+[s4_training] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s4_training_dub.mp4
+[s5_terminated] flap windows: [[np.float64(0.0), np.float64(5.66)], [np.float64(6.28), np.float64(6.66)], [np.float64(7.18), np.float64(7.44)]]
+  tts s5_terminated_0 [eng] 4.89s
+  tts s5_terminated_0_measured [eng] 8.53s
+  tts s5_terminated_0_slow [eng] 11.89s
+    line0 [eng ] measured speech  0.00- 5.66 (flap 0.00-5.66, tempo 1.40)
+  tts s5_terminated_1 [boss] 0.97s
+    line1 [boss] speech  6.28- 6.66 (flap 6.28-6.66, tempo 1.32)
+  tts s5_terminated_2 [eng] 0.97s
+    line2 [eng ] speech  7.18- 7.48 (flap 7.18-7.44, tempo 1.27)
+[s5_terminated] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s5_terminated_dub.mp4
+done — now run 5_sync_check.py
+exit=0

@@ -24,7 +24,7 @@
       "name": "s2_lawsuit",
       "keyframe": "Medium close-up shot. The ENGINEER (round black glasses, white shirt, thin black tie) stares deadpan at the boss. The BOSS (bald, two spiky hair tufts, navy suit, red tie) looks arrogant, chin raised. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Engineer looks thoroughly unimpressed, the Boss looks defiantly confident.",
-      "action": "The engineer stares deadpan: \"That's textbook age discrimination. A court ruled the algorithm is our legal agent.\" The boss waves a hand dismissively: \"Nonsense. An algorithm can't be biased. It only measures culture fit.\" Each character's mouth moves ONLY while that character is speaking.",
+      "action": "The engineer, arms crossed, says dryly: \"That's textbook age discrimination. A court ruled the algorithm is our legal agent.\" While the engineer speaks, the boss's mouth stays FIRMLY CLOSED in a confident smirk \u2014 it must not move at all. Then the boss waves a hand dismissively and booms: \"Nonsense. An algorithm can't be biased. It only measures culture fit.\" \u2014 the engineer's mouth is completely closed while the boss speaks. Each character's mouth moves ONLY while that character is speaking.",
       "lines": [
         [
           "eng",
@@ -72,7 +72,7 @@
       "name": "s5_terminated",
       "keyframe": "Medium two-shot. Exactly TWO people: the ENGINEER has SHORT DARK HAIR (he is NOT bald, no hair tufts) and sits at his desk; only the BOSS is bald with two spiky hair tufts. No duplicate of the boss anywhere. The ENGINEER (round black glasses, white shirt, thin black tie) has a completely flat, emotionless expression. The BOSS (bald, two spiky hair tufts, navy suit, red tie) stands across from him, looking vaguely confused. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Boss's eyes are wide with dawning horror, the Engineer's face remains totally blank.",
-      "action": "The engineer adjusts his glasses: \"Well, since it thinks exactly like you, it just auto-terminated our oldest employee.\" The boss looks suddenly confused: \"Who?\" The engineer deadpans: \"You.\" Each character's mouth moves ONLY while that character is speaking.",
+      "action": "The engineer, face totally blank, says flatly: \"Well, since it thinks exactly like you, it just auto-terminated our oldest employee.\" \u2014 during this ONLY the engineer's mouth moves; the boss stands frozen, mouth FIRMLY CLOSED. Then the BOSS whips his head toward the engineer, alarmed, and asks: \"Who? Who did it terminate?\" \u2014 only the boss's mouth moves while the engineer's stays shut. Finally the ENGINEER looks him dead in the eye and answers: \"You. Effective immediately.\" \u2014 only the engineer's mouth moves; the boss's mouth stays closed as his eyes widen in horror. At no point do both mouths move at the same time.",
       "lines": [
         [
           "eng",
@@ -80,11 +80,11 @@
         ],
         [
           "boss",
-          "Who?"
+          "Who? Who did it terminate?"
         ],
         [
           "eng",
-          "You."
+          "You. Effective immediately."
         ]
       ],
       "delivery": "rapid-fire"
