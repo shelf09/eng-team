@@ -47,7 +47,9 @@ Each scene object:
   exactly that text and nothing else).
 - "end_keyframe": image prompt for the scene's LAST frame — the pose the scene
   ends on after the dialogue. Must include: "BOTH MOUTHS FULLY CLOSED. Same
-  office, same lighting, same camera framing as the start frame."
+  office, same lighting, same camera framing as the start frame. ABSOLUTELY NO
+  text anywhere." (end frames leak invented title cards without this, and the
+  leak spreads to the next scene through continuity seeding)
 - "action": the animation prompt. Embed every spoken line VERBATIM in double
   quotes with its speaker (e.g.: The boss beams: "..." The engineer replies
   flatly: "...") and state that each character's mouth moves ONLY while that

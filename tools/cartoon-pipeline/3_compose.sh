@@ -47,10 +47,21 @@ for clip in $(python3 -c "import json,os;print(' '.join(s['name'] for s in json.
   crop=$(ffmpeg -hide_banner -i "$in" -vf "cropdetect=20:2:0" -frames:v 90 -f null - 2>&1 \
         | grep -oE "crop=[0-9]+:[0-9]+:[0-9]+:[0-9]+" | sort | uniq -c | sort -rn | head -1 | grep -oE "crop=.*")
   crop=${crop:-crop=in_w:in_h:0:0}
-  echo "[$clip] $crop"
+  # trim trailing dead air: end each scene shortly after its last placed line
+  trim=$(python3 - "$BASE" "$clip" <<'PY'
+import json, os, sys
+base, name = sys.argv[1], sys.argv[2]
+try:
+    placed = json.load(open(os.path.join(base, "placement.json")))[name]
+    print(f"{max(l['end'] for l in placed) + 0.35:.3f}")
+except Exception:
+    pass
+PY
+)
+  echo "[$clip] $crop${trim:+ trim=${trim}s}"
   ffmpeg -hide_banner -v error -y -i "$in" \
     -vf "${crop},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,format=yuv420p" \
-    $VE "seg/$(printf %02d $i)_${clip}.mp4"
+    ${trim:+-t $trim} $VE "seg/$(printf %02d $i)_${clip}.mp4"
   echo "file '$BASE/seg/$(printf %02d $i)_${clip}.mp4'" >> seg/concat.txt
 done
 
@@ -62,6 +73,41 @@ if [ -f end.png ]; then
   echo "file '$BASE/seg/99_end.mp4'" >> seg/concat.txt
 fi
 
-ffmpeg -hide_banner -v error -y -f concat -safe 0 -i seg/concat.txt \
-  -c:v libx264 -pix_fmt yuv420p -r 30 -c:a aac -ar 44100 -ac 2 -b:a 192k -movflags +faststart "$OUT"
+# assembly: COMPOSE_XFADE seconds of video dissolve + audio crossfade between
+# segments (default 0.3; 0 = plain hard-cut concat, the old behavior)
+XF="${COMPOSE_XFADE:-0.3}"
+if [ "$XF" = "0" ]; then
+  ffmpeg -hide_banner -v error -y -f concat -safe 0 -i seg/concat.txt \
+    -c:v libx264 -pix_fmt yuv420p -r 30 -c:a aac -ar 44100 -ac 2 -b:a 192k -movflags +faststart "$OUT"
+else
+  python3 - "$BASE" "$OUT" "$XF" <<'PY'
+import subprocess, sys
+base, out, xf = sys.argv[1], sys.argv[2], float(sys.argv[3])
+segs = [line.split("'")[1] for line in open(f"{base}/seg/concat.txt")]
+def dur(p):
+    return float(subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=nk=1:nw=1", p], capture_output=True, text=True).stdout)
+if len(segs) == 1:
+    subprocess.run(["ffmpeg", "-hide_banner", "-v", "error", "-y", "-i", segs[0],
+                    "-c", "copy", "-movflags", "+faststart", out], check=True)
+    sys.exit()
+durs = [dur(s) for s in segs]
+inputs, chains = [], []
+for s in segs:
+    inputs += ["-i", s]
+vprev, aprev, offset = "0:v", "0:a", 0.0
+for i in range(1, len(segs)):
+    offset += durs[i - 1] - xf
+    chains.append(f"[{vprev}][{i}:v]xfade=transition=fade:duration={xf}:offset={offset:.3f}[v{i}]")
+    chains.append(f"[{aprev}][{i}:a]acrossfade=d={xf}[a{i}]")
+    vprev, aprev = f"v{i}", f"a{i}"
+subprocess.run(
+    ["ffmpeg", "-hide_banner", "-v", "error", "-y", *inputs,
+     "-filter_complex", ";".join(chains), "-map", f"[{vprev}]", "-map", f"[{aprev}]",
+     "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", "30",
+     "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "192k",
+     "-movflags", "+faststart", out], check=True)
+PY
+fi
 echo "FINAL -> $OUT ($(ffprobe -v error -show_entries format=duration -of default=nk=1:nw=1 "$OUT")s)"

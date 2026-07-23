@@ -390,3 +390,103 @@ run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools
 [s5_terminated] crop=720:1260:0:10
 FINAL -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/ai_age_filter.mp4 (40.078095s)
 FULL STITCH DONE: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/ai_age_filter.mp4
+$ caption fix: re-roll s2+s4, re-dub, gates, stitch   (Wed Jul 22 22:21:10 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s2_lawsuit ===
+[s2_lawsuit] exists, skipping
+[s2_lawsuit_end] exists, skipping
+[s2_lawsuit] op models/veo-3.1-fast-generate-preview/operations/93bq11a0oukx
+[   0s] pending: ['s2_lawsuit']
+[  32s] pending: ['s2_lawsuit']
+[s2_lawsuit] DONE 1366 KB
+FINISHED 1/1: ['s2_lawsuit']
+=== s4_training ===
+[s4_training] exists, skipping
+[s4_training_end] exists, skipping
+[s4_training] op models/veo-3.1-fast-generate-preview/operations/vgm7nkpk2u7x
+[   0s] pending: ['s4_training']
+[  32s] pending: ['s4_training']
+[s4_training] DONE 1986 KB
+FINISHED 1/1: ['s4_training']
+CHAIN COMPLETE: 2 scene(s) (heygen skipped)
+[s2_lawsuit] flap windows: [[np.float64(0.0), np.float64(3.94)], [np.float64(4.1), np.float64(7.58)]]
+    line0 [eng ] fast speech  0.00- 3.94 (flap 0.00-3.94, tempo 0.91)
+    line1 [boss] fast speech  4.10- 7.58 (flap 4.10-7.58, tempo 1.24)
+[s2_lawsuit] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s2_lawsuit_dub.mp4
+[s4_training] flap windows: [[np.float64(0.0), np.float64(3.18)], [np.float64(3.48), np.float64(7.46)]]
+    line0 [eng ] speech  0.00- 3.18 (flap 0.00-3.18, tempo 1.23)
+    line1 [boss] speech  3.48- 7.46 (flap 3.48-7.46, tempo 1.44)
+[s4_training] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s4_training_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_dinosaurs     0   0.02- 4.20   0.00- 4.20   +0.02    +0.00   100%   1.12  PASS
+s1_dinosaurs     1   4.34- 7.12   4.34- 7.20   +0.00    -0.08    97%   1.31  PASS
+s2_lawsuit       0   0.02- 3.90   0.00- 3.94   +0.02    -0.04    98%   0.91  PASS
+s2_lawsuit       1   4.10- 7.48   4.10- 7.58   +0.00    -0.10    97%   1.24  PASS
+s3_natives       0   0.02- 2.66   0.00- 2.70   +0.02    -0.04    98%   1.13  PASS
+s3_natives       1   3.28- 7.20   3.28- 7.38   +0.00    -0.18    96%   1.45  PASS
+s4_training      0   0.02- 3.08   0.00- 3.18   +0.02    -0.10    96%   1.23  PASS
+s4_training      1   3.48- 7.20   3.48- 7.46   +0.00    -0.26    93%   1.44  PASS
+s5_terminated    0   0.02- 4.48   0.00- 4.50   +0.02    -0.02    99%   0.98  PASS
+s5_terminated    1   4.94- 6.82   4.92- 6.82   +0.02    +0.00    99%   1.20  PASS
+
+ALL LINES PASS
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s2_lawsuit       0  eng   still       moving      PASS  The engineer shows active talking animation across frames wh
+s2_lawsuit       1  boss  moving      still       PASS  The boss continuously opens and closes his mouth while speak
+s4_training      0  eng   still       moving      PASS  The engineer exhibits visible mouth movement across frames w
+s4_training      1  boss  moving      still       PASS  Boss is actively speaking with changing mouth shapes across 
+
+ALL LINES PASS
+sync exit=0 speaker exit=0
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+[s1_dinosaurs] crop=720:1260:0:10 trim=7.550s
+[s2_lawsuit] crop=720:1260:0:10 trim=7.930s
+[s3_natives] crop=720:1260:0:10 trim=7.730s
+[s4_training] crop=720:1260:0:10 trim=7.810s
+[s5_terminated] crop=720:1260:0:10 trim=7.170s
+FINAL -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/ai_age_filter.mp4 (37.066016s)
+STITCH DONE
+$ s3 clean re-roll   (Wed Jul 22 22:25:10 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s3_natives ===
+[s3_natives] exists, skipping
+[s3_natives_end] exists, skipping
+[s3_natives] op models/veo-3.1-fast-generate-preview/operations/ydbrk8kdndxj
+[   0s] pending: ['s3_natives']
+[  32s] pending: ['s3_natives']
+[s3_natives] DONE 1849 KB
+FINISHED 1/1: ['s3_natives']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+[s3_natives] flap windows: [[np.float64(0.0), np.float64(2.88)], [np.float64(2.96), np.float64(7.42)]]
+    line0 [eng ] speech  0.00- 2.88 (flap 0.00-2.88, tempo 1.06)
+    line1 [boss] speech  2.96- 7.42 (flap 2.96-7.42, tempo 1.33)
+[s3_natives] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/clips/s3_natives_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_dinosaurs     0   0.02- 4.20   0.00- 4.20   +0.02    +0.00   100%   1.12  PASS
+s1_dinosaurs     1   4.34- 7.12   4.34- 7.20   +0.00    -0.08    97%   1.31  PASS
+s2_lawsuit       0   0.02- 3.90   0.00- 3.94   +0.02    -0.04    98%   0.91  PASS
+s2_lawsuit       1   4.10- 7.48   4.10- 7.58   +0.00    -0.10    97%   1.24  PASS
+s3_natives       0   0.02- 2.84   0.00- 2.88   +0.02    -0.04    98%   1.06  PASS
+s3_natives       1   2.96- 7.22   2.96- 7.42   +0.00    -0.20    96%   1.33  PASS
+s4_training      0   0.02- 3.08   0.00- 3.18   +0.02    -0.10    96%   1.23  PASS
+s4_training      1   3.48- 7.20   3.48- 7.46   +0.00    -0.26    93%   1.44  PASS
+s5_terminated    0   0.02- 4.48   0.00- 4.50   +0.02    -0.02    99%   0.98  PASS
+s5_terminated    1   4.94- 6.82   4.92- 6.82   +0.02    +0.00    99%   1.20  PASS
+
+ALL LINES PASS
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s3_natives       0  eng   still       moving      PASS  The engineer actively speaks across the first four frames wh
+s3_natives       1  boss  moving      still       PASS  The boss speaks actively across multiple frames while the en
+
+ALL LINES PASS
+sync exit=0 speaker exit=0
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+[s1_dinosaurs] crop=720:1260:0:10 trim=7.550s
+[s2_lawsuit] crop=720:1260:0:10 trim=7.930s
+[s3_natives] crop=720:1260:0:10 trim=7.770s
+[s4_training] crop=720:1260:0:10 trim=7.810s
+[s5_terminated] crop=720:1260:0:10 trim=7.170s
+FINAL -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter/ai_age_filter.mp4 (37.133008s)
+STITCH DONE
