@@ -65,6 +65,11 @@ Or run stages batch-style as before (`python3 1_nano_scenes.py`, then
 `python3 2_veo_scenes.py`); every stage also takes scene names to re-run just
 those scenes (e.g. `python3 0_chain.py s3_shock`).
 
+CAVEAT — HeyGen lipsync re-animates ONE face per video: in a two-character
+shot it puts all the audio on whichever face it picks (wrong mouths, learned
+the expensive way). Use `--heygen` only on single-character scenes; for
+dialogue scenes use the dub stack (stages 4-6), which is the proven path.
+
 The `--heygen` step needs `HEYGEN_API_KEY` and reuses the hardened client at
 `.claude/skills/clone-video-creator/video-gen/scripts/heygen_lipsync.py`
 (override with `$HEYGEN_LIPSYNC`). Audio comes from `clips/<scene>_dub.mp4`
