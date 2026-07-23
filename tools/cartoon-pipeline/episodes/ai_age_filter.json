@@ -71,16 +71,12 @@
     {
       "name": "s5_terminated",
       "keyframe": "Medium two-shot. Exactly TWO people: the ENGINEER has SHORT DARK HAIR (he is NOT bald, no hair tufts) and sits at his desk; only the BOSS is bald with two spiky hair tufts. No duplicate of the boss anywhere. The ENGINEER (round black glasses, white shirt, thin black tie) has a completely flat, emotionless expression. The BOSS (bald, two spiky hair tufts, navy suit, red tie) stands across from him, looking vaguely confused. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Boss's eyes are wide with dawning horror, the Engineer's face remains totally blank.",
-      "action": "The engineer, face totally blank, says flatly: \"Well, since it thinks exactly like you, it just auto-terminated our oldest employee.\" \u2014 during this ONLY the engineer's mouth moves; the boss stands frozen, mouth FIRMLY CLOSED. Then the BOSS whips his head toward the engineer, alarmed, and asks: \"Who? Who did it terminate?\" \u2014 only the boss's mouth moves while the engineer's stays shut. Finally the ENGINEER looks him dead in the eye and answers: \"You. Effective immediately.\" \u2014 only the engineer's mouth moves; the boss's mouth stays closed as his eyes widen in horror. At no point do both mouths move at the same time.",
+      "end_keyframe": "Final frame, same setup as the attached start frame: The BOSS stands with BOTH HANDS CLAMPED OVER HIS OWN MOUTH, eyes enormous with horror. The ENGINEER sits at his desk, face totally blank, MOUTH FULLY CLOSED. Same office, same lighting, same camera framing as the start frame.",
+      "action": "ONLY THE ENGINEER SPEAKS IN THIS SCENE \u2014 the boss never talks and his mouth NEVER opens. The engineer, face totally blank, says flatly: \"Well, since it thinks exactly like you, it just auto-terminated our oldest employee.\" The boss whips his head toward the engineer in alarm and CLAPS BOTH HANDS OVER HIS OWN MOUTH, keeping them clamped there, mouth completely covered, for the rest of the scene. The engineer looks him dead in the eye and adds: \"You. Effective immediately.\" Only the engineer's mouth ever moves.",
       "lines": [
         [
           "eng",
           "Well, since it thinks exactly like you, it just auto-terminated our oldest employee."
-        ],
-        [
-          "boss",
-          "Who? Who did it terminate?"
         ],
         [
           "eng",

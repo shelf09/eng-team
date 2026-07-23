@@ -120,10 +120,12 @@ def match_line(words, pos, line_words):
         return None, None, pos
     return words[hits[0]][1], words[hits[-1]][2], hits[-1] + 1
 
-def take_missing_words(model, wav, text):
+def take_missing_words(model, wav, text, vad=True):
     """Words of `text` NOT heard (in order) in a TTS take. TTS occasionally drops
-    words from a take — such takes must never win selection on duration alone."""
-    segs, _ = model.transcribe(wav, language="en", vad_filter=True, beam_size=5)
+    words from a take — such takes must never win selection on duration alone.
+    vad=False for mix segments: VAD boundaries wobble against the noise bed and
+    clip function words that a plain listen hears fine."""
+    segs, _ = model.transcribe(wav, language="en", vad_filter=vad, beam_size=5)
     heard = [norm(w) for seg in segs for w in seg.text.split() if norm(w)]
     pos, missing = 0, []
     for lw in (norm(w) for w in text.split() if norm(w)):
