@@ -1,0 +1,100 @@
+{
+  "episode": "ai_age_filter",
+  "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
+  "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
+  "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
+  "scenes": [
+    {
+      "name": "s1_dinosaurs",
+      "keyframe": "Medium shot. The BOSS (bald, two spiky hair tufts, navy suit, red tie) stands looking smug and proud, hands on his hips. The ENGINEER (round black glasses, white shirt, thin black tie) sits at a desk, looking flat and tired. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Boss retains his smug posture, while the Engineer continues his deadpan stare. ABSOLUTELY NO text anywhere \u2014 no titles, no captions, no words.",
+      "action": "The boss gestures proudly: \"Our new AI recruiter is brilliant. It just filtered out a thousand expensive dinosaurs.\" The engineer replies flatly: \"You set it to auto-reject graduation dates before 2005.\" Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "boss",
+          "Our new AI recruiter is brilliant. It just filtered out a thousand expensive dinosaurs."
+        ],
+        [
+          "eng",
+          "You set it to auto-reject graduation dates before 2005."
+        ]
+      ]
+    },
+    {
+      "name": "s2_lawsuit",
+      "keyframe": "Medium close-up shot. The ENGINEER (round black glasses, white shirt, thin black tie) stares deadpan at the boss. The BOSS (bald, two spiky hair tufts, navy suit, red tie) looks arrogant, chin raised. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Engineer looks thoroughly unimpressed, the Boss looks defiantly confident. ABSOLUTELY NO text anywhere \u2014 no titles, no captions, no words.",
+      "action": "The engineer, arms crossed, says dryly: \"That's textbook age discrimination. A court ruled the algorithm is our legal agent.\" While the engineer speaks, the boss's mouth stays FIRMLY CLOSED in a confident smirk \u2014 it must not move at all. Then the boss waves a hand dismissively and booms: \"Nonsense. An algorithm can't be biased. It only measures culture fit.\" \u2014 the engineer's mouth is completely closed while the boss speaks. Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "eng",
+          "That's textbook age discrimination. A court ruled the algorithm is our legal agent."
+        ],
+        [
+          "boss",
+          "Nonsense. An algorithm can't be biased. It only measures culture fit."
+        ]
+      ]
+    },
+    {
+      "name": "s3_natives",
+      "keyframe": "Medium two-shot. The ENGINEER (round black glasses, white shirt, thin black tie) leans slightly back, looking exhausted. The BOSS (bald, two spiky hair tufts, navy suit, red tie) is highly animated, pointing a finger upward triumphantly. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Boss is frozen in his triumphant pointing pose, the Engineer remains motionless. ABSOLUTELY NO text anywhere \u2014 no titles, no captions, no words.",
+      "action": "The engineer blinks slowly: \"It rejected fifty senior developers at three in the morning.\" The boss points upward triumphantly: \"Overqualified! We need cheap, clueless digital natives who don't ask questions.\" Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "eng",
+          "It rejected fifty senior developers at three in the morning."
+        ],
+        [
+          "boss",
+          "Overqualified! We need cheap, clueless digital natives who don't ask questions."
+        ]
+      ]
+    },
+    {
+      "name": "s4_training",
+      "keyframe": "Medium wide shot. The ENGINEER (round black glasses, white shirt, thin black tie) is rubbing the back of his neck in frustration. The BOSS (bald, two spiky hair tufts, navy suit, red tie) has a fist proudly pressed to his own chest, beaming. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. The Boss holds his proud stance, the Engineer lowers his hand wearily. ABSOLUTELY NO text anywhere \u2014 no titles, no captions, no words.",
+      "action": "The engineer sighs, rubbing his neck: \"Those fifty developers are now filing a massive class-action lawsuit.\" The boss pounds his chest proudly: \"Let them try! I trained the AI perfectly on my own flawless decisions.\" Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "eng",
+          "Those fifty developers are now filing a massive class-action lawsuit."
+        ],
+        [
+          "boss",
+          "Let them try! I trained the AI perfectly on my own flawless decisions."
+        ]
+      ]
+    },
+    {
+      "name": "s5_terminated",
+      "keyframe": "Medium two-shot. Exactly TWO people: the ENGINEER has SHORT DARK HAIR (he is NOT bald, no hair tufts) and sits at his desk; only the BOSS is bald with two spiky hair tufts. No duplicate of the boss anywhere. The ENGINEER (round black glasses, white shirt, thin black tie) has a completely flat, emotionless expression. The BOSS (bald, two spiky hair tufts, navy suit, red tie) stands across from him, looking vaguely confused. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "Final frame, same setup as the attached start frame: The BOSS stands with BOTH HANDS CLAMPED OVER HIS OWN MOUTH, eyes enormous with horror. The ENGINEER sits at his desk, face totally blank, MOUTH FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere \u2014 no titles, no captions, no words.",
+      "action": "ONLY THE ENGINEER SPEAKS IN THIS SCENE \u2014 the boss never talks and his mouth NEVER opens. The engineer, face totally blank, says flatly: \"Well, since it thinks exactly like you, it just auto-terminated our oldest employee.\" The boss whips his head toward the engineer in alarm and CLAPS BOTH HANDS OVER HIS OWN MOUTH, keeping them clamped there, mouth completely covered, for the rest of the scene. The engineer looks him dead in the eye and adds: \"You. Effective immediately.\" Only the engineer's mouth ever moves.",
+      "lines": [
+        [
+          "eng",
+          "Well, since it thinks exactly like you, it just auto-terminated our oldest employee."
+        ],
+        [
+          "eng",
+          "You. Effective immediately."
+        ]
+      ],
+      "delivery": "rapid-fire"
+    }
+  ],
+  "tts": {
+    "model": "gemini-2.5-flash-preview-tts",
+    "voices": {
+      "boss": "Fenrir",
+      "eng": "Iapetus"
+    },
+    "styles": {
+      "boss": "Say briskly and energetically, in a smug corporate-executive baritone brimming with fake enthusiasm and total unearned confidence: ",
+      "eng": "Say at a quick clip, in a flat, tired, deadpan monotone, utterly unimpressed: "
+    }
+  }
+}

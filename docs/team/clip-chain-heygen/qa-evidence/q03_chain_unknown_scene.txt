@@ -1,0 +1,3 @@
+$ CARTOON_DIR=A python3 0_chain.py nope
+unknown scene(s): ['nope']
+exit=1

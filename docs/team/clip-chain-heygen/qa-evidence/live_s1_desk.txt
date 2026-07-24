@@ -1,0 +1,11 @@
+$ CARTOON_DIR=build-live python3 0_chain.py s1_desk   (Fri Jul 17 16:40:45 CDT 2026)
+=== s1_desk ===
+[s1_desk] saved
+[s1_desk_end] saved
+[s1_desk] op models/veo-3.1-fast-generate-preview/operations/1akctu1b9ym9
+[   0s] pending: ['s1_desk']
+[  32s] pending: ['s1_desk']
+[s1_desk] DONE 1514 KB
+FINISHED 1/1: ['s1_desk']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+exit=0

@@ -1,0 +1,48 @@
+$ python3 0_chain.py   (unlimited_pto_trap, 4 scenes, Thu Jul 23 20:15:53 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723
+=== s1_announcement ===
+[s1_announcement] saved
+[s1_announcement_end] saved
+[s1_announcement] op models/veo-3.1-fast-generate-preview/operations/mbj26liftktf
+[   0s] pending: ['s1_announcement']
+[  32s] pending: ['s1_announcement']
+[s1_announcement] DONE 1399 KB
+FINISHED 1/1: ['s1_announcement']
+=== s2_trust ===
+[s2_trust] saved
+[s2_trust_end] saved
+[s2_trust] op models/veo-3.1-fast-generate-preview/operations/k7hdticq4bq7
+[   0s] pending: ['s2_trust']
+[  32s] pending: ['s2_trust']
+[s2_trust] DONE 1239 KB
+FINISHED 1/1: ['s2_trust']
+=== s3_approval ===
+[s3_approval] saved
+[s3_approval_end] saved
+[s3_approval] op models/veo-3.1-fast-generate-preview/operations/ypcd0uf4236t
+[   0s] pending: ['s3_approval']
+[  32s] pending: ['s3_approval']
+[s3_approval] DONE 1676 KB
+FINISHED 1/1: ['s3_approval']
+=== s4_zero ===
+[s4_zero] saved
+[s4_zero_end] saved
+[s4_zero] op models/veo-3.1-fast-generate-preview/operations/utqtwfsavj7x
+[   0s] pending: ['s4_zero']
+[  32s] pending: ['s4_zero']
+[s4_zero] DONE 959 KB
+FINISHED 1/1: ['s4_zero']
+CHAIN COMPLETE: 4 scene(s) (heygen skipped)
+exit=0
+$ s2 re-roll (giraffe neck + glass person)   (Thu Jul 23 20:22:29 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723
+=== s2_trust ===
+[s2_trust] saved
+[s2_trust_end] saved
+[s2_trust] op models/veo-3.1-fast-generate-preview/operations/0brqdcpb6hrf
+[   0s] pending: ['s2_trust']
+[  32s] pending: ['s2_trust']
+[s2_trust] DONE 2726 KB
+FINISHED 1/1: ['s2_trust']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+exit=0

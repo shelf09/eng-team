@@ -1,0 +1,18 @@
+$ CARTOON_DIR=B GEMINI_API_KEY='' python3 0_chain.py
+=== s1_desk ===
+[s1_desk] exists, skipping
+[s1_desk_end] exists, skipping
+[s1_desk] exists, skipping
+FINISHED 1/1: ['s1_desk']
+=== s2_whiteboard ===
+[s2_whiteboard] HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+CHAIN STOPPED at s2_whiteboard / keyframes (exit 1)
+exit=1
+veo_ops.json exists: no

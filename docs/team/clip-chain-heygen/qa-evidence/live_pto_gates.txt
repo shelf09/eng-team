@@ -1,0 +1,153 @@
+$ PTO dub + gates + stitch   (Thu Jul 23 20:24:36 CDT 2026)
+[s1_announcement] flap windows: [[np.float64(0.0), np.float64(4.36)], [np.float64(4.86), np.float64(7.34)]]
+  tts s1_announcement_0 [boss] 5.73s
+    line0 [boss] speech  0.00- 4.36 (flap 0.00-4.36, tempo 1.18)
+  tts s1_announcement_1 [eng] 2.93s
+    line1 [eng ] speech  4.86- 7.34 (flap 4.86-7.34, tempo 0.94)
+[s1_announcement] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s1_announcement_dub.mp4
+[s2_trust] flap windows: [[np.float64(0.0), np.float64(3.62)], [np.float64(3.62), np.float64(7.26)]]
+  tts s2_trust_0 [boss] 4.41s
+    line0 [boss] speech  0.00- 3.56 (flap 0.00-3.62, tempo 1.08)
+  tts s2_trust_1 [eng] 2.41s
+  tts s2_trust_1_measured [eng] 3.69s
+  tts s2_trust_1_slow [eng] 6.57s
+    line1 [eng ] measured speech  3.64- 7.08 (flap 3.62-7.26, tempo 0.90)
+[s2_trust] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s2_trust_dub.mp4
+[s3_approval] flap windows: [[np.float64(0.0), np.float64(4.44)], [np.float64(4.9), np.float64(6.8)]]
+  tts s3_approval_0 [boss] 5.61s
+    line0 [boss] speech  0.00- 4.44 (flap 0.00-4.44, tempo 1.11)
+  tts s3_approval_1 [eng] 2.69s
+    line1 [eng ] speech  4.90- 6.80 (flap 4.90-6.80, tempo 1.12)
+[s3_approval] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s3_approval_dub.mp4
+[s4_zero] flap windows: [[np.float64(0.0), np.float64(3.24)], [np.float64(3.24), np.float64(4.88)], [np.float64(4.88), np.float64(7.6)]]
+  tts s4_zero_0 [boss] 5.13s
+    line0 [boss] speech  0.00- 3.18 (flap 0.00-3.24, tempo 1.46)
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 204, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 151, in dub_scene
+    wav = valid_take(model_holder, f"{name}_{i}", who, text, delivery, "")
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 125, in valid_take
+    wav = tts(line_id, who, text, delivery, pace)
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 58, in tts
+    with urllib.request.urlopen(req, timeout=120) as r:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+$ resume dub after rate-limit cooldown   (Thu Jul 23 20:27:44 CDT 2026)
+    line0 [boss] speech  0.00- 4.36 (flap 0.00-4.36, tempo 1.18)
+    line1 [eng ] speech  4.86- 7.34 (flap 4.86-7.34, tempo 0.94)
+[s1_announcement] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s1_announcement_dub.mp4
+    line0 [boss] speech  0.00- 3.56 (flap 0.00-3.62, tempo 1.08)
+    line1 [eng ] measured speech  3.64- 7.08 (flap 3.62-7.26, tempo 0.90)
+[s2_trust] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s2_trust_dub.mp4
+    line0 [boss] speech  0.00- 4.44 (flap 0.00-4.44, tempo 1.11)
+    line1 [eng ] speech  4.90- 6.80 (flap 4.90-6.80, tempo 1.12)
+[s3_approval] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s3_approval_dub.mp4
+    line0 [boss] speech  0.00- 3.18 (flap 0.00-3.24, tempo 1.46)
+  tts s4_zero_1 [eng] 2.01s
+    line1 [eng ] speech  3.26- 4.82 (flap 3.24-4.88, tempo 0.94)
+  tts s4_zero_2 [boss] 3.41s
+    line2 [boss] speech  4.90- 7.60 (flap 4.88-7.60, tempo 1.13)
+[s4_zero] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s4_zero_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_announcement  0   0.02- 4.36   0.00- 4.36   +0.02    +0.00   100%   1.18  PASS
+s1_announcement  1   4.86- 7.30   4.86- 7.34   +0.00    -0.04    98%   0.94  PASS
+s2_trust         0   0.02- 3.46   0.00- 3.62   +0.02    -0.16    95%   1.08  PASS
+s2_trust         1   3.50- 6.88   3.62- 7.26   -0.12    -0.38    90%   0.90  FAIL
+s3_approval      0   0.02- 4.46   0.00- 4.44   +0.02    +0.02   100%   1.11  PASS
+s3_approval      1   4.90- 6.74   4.90- 6.80   +0.00    -0.06    97%   1.12  PASS
+s4_zero          0   0.02- 3.16   0.00- 3.24   +0.02    -0.08    97%   1.46  PASS
+s4_zero          1   3.26- 4.78   3.24- 4.88   +0.02    -0.10    93%   0.94  PASS
+s4_zero          2   4.90- 7.60   4.88- 7.60   +0.02    +0.00    99%   1.13  PASS
+
+1 check(s) FAIL
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_announcement  0  boss  moving      still       PASS  The boss is actively speaking across frames while the engine
+s1_announcement  1  eng   still       moving      PASS  The engineer shows continuous mouth movement while the boss 
+s2_trust         0  boss  moving      still       PASS  The boss actively speaks throughout the frames while the eng
+s2_trust         1  eng   still       moving      PASS  The engineer opens and closes his mouth across several frame
+s3_approval      0  boss  moving      still       PASS  The boss is actively speaking throughout the frames while th
+s3_approval      1  eng   still       moving      PASS  The engineer demonstrates active mouth movement during speec
+s4_zero          0  boss  still       moving      FAIL  The engineer is actively speaking while the scripted boss re
+s4_zero          1  eng   moving      still       FAIL  The boss is actively speaking while the engineer remains sil
+s4_zero          2  boss  moving      still       PASS  Boss speaks while the engineer remains silent across all fra
+
+2 line(s) FAIL
+sync exit=1 speaker exit=1
+GATES NOT CLEAN — no stitch
+$ s4 2-beat re-roll + s2 take re-roll + gates + stitch   (Thu Jul 23 20:30:11 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723
+=== s4_zero ===
+[s4_zero] exists, skipping
+[s4_zero_end] exists, skipping
+[s4_zero] op models/veo-3.1-fast-generate-preview/operations/ghppg59v06zo
+[   0s] pending: ['s4_zero']
+[  32s] pending: ['s4_zero']
+[s4_zero] DONE 950 KB
+FINISHED 1/1: ['s4_zero']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+    line0 [boss] speech  0.00- 3.56 (flap 0.00-3.62, tempo 1.08)
+  tts s2_trust_1 [eng] 2.89s
+  tts s2_trust_1_measured [eng] 5.61s
+  tts s2_trust_1_slow [eng] 5.49s
+    line1 [eng ] measured speech  3.64- 7.26 (flap 3.62-7.26, tempo 1.38)
+[s2_trust] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s2_trust_dub.mp4
+[s4_zero] flap windows: [[np.float64(0.0), np.float64(3.34)], [np.float64(3.34), np.float64(7.24)]]
+  tts s4_zero_0 [boss] 4.81s
+    s4_zero_0: take is missing ['denied'] — re-rolling
+  tts s4_zero_0 [boss] 5.53s
+  tts s4_zero_0_fast [boss] 3.81s
+    line0 [boss] fast speech  0.00- 3.28 (flap 0.00-3.34, tempo 0.96)
+  tts s4_zero_1 [eng] 4.09s
+  tts s4_zero_1_measured [eng] 6.45s
+  tts s4_zero_1_slow [eng] 8.17s
+    line1 [eng ] speech  3.36- 7.14 (flap 3.34-7.24, tempo 0.90)
+[s4_zero] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723/clips/s4_zero_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_announcement  0   0.02- 4.36   0.00- 4.36   +0.02    +0.00   100%   1.18  PASS
+s1_announcement  1   4.86- 7.30   4.86- 7.34   +0.00    -0.04    98%   0.94  PASS
+s2_trust         0   0.02- 3.46   0.00- 3.62   +0.02    -0.16    95%   1.08  PASS
+s2_trust         1   3.50- 7.08   3.62- 7.26   -0.12    -0.18    95%   1.38  PASS
+s3_approval      0   0.02- 4.46   0.00- 4.44   +0.02    +0.02   100%   1.11  PASS
+s3_approval      1   4.90- 6.74   4.90- 6.80   +0.00    -0.06    97%   1.12  PASS
+s4_zero          0   0.02- 3.06   0.00- 3.34   +0.02    -0.28    91%   0.96  PASS
+s4_zero          1   3.14- 7.00   3.34- 7.24   -0.20    -0.24    94%   0.90  PASS
+
+ALL LINES PASS
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_announcement  0  boss  moving      still       PASS  The boss displays active mouth movement while the engineer r
+s1_announcement  1  eng   still       moving      PASS  The engineer moves his mouth continuously while the boss kee
+s2_trust         0  boss  moving      still       PASS  The boss actively speaks with visible mouth movement across 
+s2_trust         1  eng   still       moving      PASS  ENG opens and closes his mouth across multiple frames while 
+s3_approval      0  boss  moving      still       PASS  The boss speaks actively across the frames while the enginee
+s3_approval      1  eng   still       moving      PASS  The engineer speaks across frames while the boss remains sti
+s4_zero          0  boss  moving      still       PASS  The boss speaks actively across multiple frames while the en
+s4_zero          1  eng   still       moving      PASS  The engineer actively speaks across multiple frames while th
+
+ALL LINES PASS
+sync exit=0 speaker exit=0
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/build-20260723
+[s1_announcement] crop=720:1260:0:10 trim=7.690s
+[s2_trust] crop=720:1260:0:10 trim=7.610s
+[s3_approval] crop=720:1260:0:10 trim=7.150s
+[s4_zero] crop=720:1260:0:10 trim=7.488s
+FINAL -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/unlimited_pto_trap.mp4 (29.100000s)
+STITCH DONE: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/unlimited_pto_trap/unlimited_pto_trap.mp4

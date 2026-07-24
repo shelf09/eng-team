@@ -1,0 +1,46 @@
+$ CARTOON_DIR=A HEYGEN_LIPSYNC=stub_ok python3 0_chain.py --heygen
+=== s1_desk ===
+[s1_desk] exists, skipping
+[s1_desk_end] exists, skipping
+[s1_desk] exists, skipping
+FINISHED 1/1: ['s1_desk']
+=== s2_whiteboard ===
+[s2_whiteboard] exists, skipping
+[s2_whiteboard_end] exists, skipping
+[s2_whiteboard] exists, skipping
+FINISHED 1/1: ['s2_whiteboard']
+=== s3_shock ===
+[s3_shock] exists, skipping
+[s3_shock_end] exists, skipping
+[s3_shock] exists, skipping
+FINISHED 1/1: ['s3_shock']
+=== s4_facepalm ===
+[s4_facepalm] exists, skipping
+[s4_facepalm_end] exists, skipping
+[s4_facepalm] exists, skipping
+FINISHED 1/1: ['s4_facepalm']
+=== s5_shoulder ===
+[s5_shoulder] exists, skipping
+[s5_shoulder_end] exists, skipping
+[s5_shoulder] exists, skipping
+FINISHED 1/1: ['s5_shoulder']
+CHAIN COMPLETE: 5 scene(s)
+exit=0
+--- clips after:
+s1_desk_heygen.mp4
+s2_whiteboard_heygen.mp4
+s3_shock_heygen.mp4
+s4_facepalm_heygen.mp4
+s5_shoulder_heygen.mp4
+--- wavs:
+s1_desk.wav
+s2_whiteboard.wav
+s3_shock.wav
+s4_facepalm.wav
+s5_shoulder.wav
+--- stub argv per call:
+--video /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s1_desk.mp4 --audio /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/heygen/s1_desk.wav --out /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s1_desk_heygen.mp4 --confirm-upload
+--video /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s2_whiteboard.mp4 --audio /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/heygen/s2_whiteboard.wav --out /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s2_whiteboard_heygen.mp4 --confirm-upload
+--video /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s3_shock.mp4 --audio /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/heygen/s3_shock.wav --out /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s3_shock_heygen.mp4 --confirm-upload
+--video /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s4_facepalm.mp4 --audio /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/heygen/s4_facepalm.wav --out /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s4_facepalm_heygen.mp4 --confirm-upload
+--video /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s5_shoulder.mp4 --audio /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/heygen/s5_shoulder.wav --out /private/tmp/claude-501/-Users-curthochwender-vs-code-projects-hochwender-claude-eng-team/07984752-cc47-4fb4-a54f-dbc854aa8fe5/scratchpad/qa/A/clips/s5_shoulder_heygen.mp4 --confirm-upload

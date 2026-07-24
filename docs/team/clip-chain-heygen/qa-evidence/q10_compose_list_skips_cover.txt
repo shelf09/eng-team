@@ -1,0 +1,8 @@
+$ CARTOON_DIR=D (cover.png present) COMPOSE_LIST_ONLY=1 bash 3_compose.sh out.mp4
+s1_desk -> clips/s1_desk_heygen.mp4
+s2_whiteboard -> clips/s2_whiteboard_dub.mp4
+s3_shock -> clips/s3_shock.mp4
+s4_facepalm -> clips/s4_facepalm.mp4
+s5_shoulder -> clips/s5_shoulder.mp4
+exit=0
+cover artifacts in seg/: 0

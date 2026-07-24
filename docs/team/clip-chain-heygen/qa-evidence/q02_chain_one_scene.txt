@@ -1,0 +1,8 @@
+$ CARTOON_DIR=A python3 0_chain.py s3_shock
+=== s3_shock ===
+[s3_shock] exists, skipping
+[s3_shock_end] exists, skipping
+[s3_shock] exists, skipping
+FINISHED 1/1: ['s3_shock']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+exit=0

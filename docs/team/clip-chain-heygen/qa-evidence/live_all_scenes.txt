@@ -1,0 +1,40 @@
+$ CARTOON_DIR=build-live python3 0_chain.py   (Fri Jul 17 16:47:10 CDT 2026)
+=== s1_desk ===
+[s1_desk] exists, skipping
+[s1_desk_end] exists, skipping
+[s1_desk] exists, skipping
+FINISHED 1/1: ['s1_desk']
+=== s2_whiteboard ===
+[s2_whiteboard] saved
+[s2_whiteboard_end] saved
+[s2_whiteboard] op models/veo-3.1-fast-generate-preview/operations/rx633z5pyagr
+[   0s] pending: ['s2_whiteboard']
+[  32s] pending: ['s2_whiteboard']
+[s2_whiteboard] DONE 1800 KB
+FINISHED 1/1: ['s2_whiteboard']
+=== s3_shock ===
+[s3_shock] saved
+[s3_shock_end] saved
+[s3_shock] op models/veo-3.1-fast-generate-preview/operations/5jvekpnko9it
+[   0s] pending: ['s3_shock']
+[  32s] pending: ['s3_shock']
+[s3_shock] DONE 1659 KB
+FINISHED 1/1: ['s3_shock']
+=== s4_facepalm ===
+[s4_facepalm] saved
+[s4_facepalm_end] saved
+[s4_facepalm] op models/veo-3.1-fast-generate-preview/operations/fv84xgq3f13p
+[   0s] pending: ['s4_facepalm']
+[  32s] pending: ['s4_facepalm']
+[s4_facepalm] DONE 1698 KB
+FINISHED 1/1: ['s4_facepalm']
+=== s5_shoulder ===
+[s5_shoulder] saved
+[s5_shoulder_end] saved
+[s5_shoulder] op models/veo-3.1-fast-generate-preview/operations/rynq69t0r746
+[   0s] pending: ['s5_shoulder']
+[  32s] pending: ['s5_shoulder']
+[s5_shoulder] DONE 1247 KB
+FINISHED 1/1: ['s5_shoulder']
+CHAIN COMPLETE: 5 scene(s) (heygen skipped)
+exit=0

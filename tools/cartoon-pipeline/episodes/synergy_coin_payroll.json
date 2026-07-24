@@ -1,0 +1,100 @@
+{
+  "episode": "synergy_coin_payroll",
+  "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
+  "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
+  "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
+  "scenes": [
+    {
+      "name": "s1_announcement",
+      "keyframe": "Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on his hips, beaming with unearned confidence. ENGINEER (round black glasses, white shirt, thin black tie) sits at his desk looking flat, tired, and deadpan. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. Boss maintains his smug smile, Engineer continues to stare blankly ahead.",
+      "action": "The boss beams proudly: \"Great news! We're disrupting payroll. You're now being paid in our proprietary cryptocurrency: SynergyCoin.\" The engineer stares blankly and replies: \"You are paying us in fake money.\" The boss's mouth moves ONLY while speaking, then the engineer's mouth moves ONLY while speaking.",
+      "lines": [
+        [
+          "boss",
+          "Great news! We're disrupting payroll. You're now being paid in our proprietary cryptocurrency: SynergyCoin."
+        ],
+        [
+          "eng",
+          "You are paying us in fake money."
+        ]
+      ]
+    },
+    {
+      "name": "s2_pegged",
+      "keyframe": "Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) gestures grandly with both hands, looking visionary. ENGINEER (round black glasses, white shirt, thin black tie) rests his chin on his hand, completely exhausted and unamused. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. Boss freezes mid-gesture, Engineer looks dead inside.",
+      "action": "The boss gestures grandly: \"It's an internal economy! The value is pegged directly to our weekly morale survey.\" The engineer sighs flatly: \"So my salary is currently worthless.\" The boss's mouth moves ONLY while speaking, then the engineer's mouth moves ONLY while speaking.",
+      "lines": [
+        [
+          "boss",
+          "It's an internal economy! The value is pegged directly to our weekly morale survey."
+        ],
+        [
+          "eng",
+          "So my salary is currently worthless."
+        ]
+      ]
+    },
+    {
+      "name": "s3_store",
+      "keyframe": "Close-up. BOSS (bald, two spiky hair tufts, navy suit, red tie) points a finger upward as if making a brilliant point, grinning. ENGINEER (round black glasses, white shirt, thin black tie) looks perfectly flat, eyes half-closed. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. Boss holding his pointed finger up, Engineer staring straight ahead in misery.",
+      "action": "The boss points upward: \"Think of the liquidity! You can spend it exclusively at the new company store.\" The engineer answers in a deadpan monotone: \"I cannot pay my mortgage with branded stress balls.\" Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "boss",
+          "Think of the liquidity! You can spend it exclusively at the new company store."
+        ],
+        [
+          "eng",
+          "I cannot pay my mortgage with branded stress balls."
+        ]
+      ]
+    },
+    {
+      "name": "s4_vesting",
+      "keyframe": "Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) crosses his arms, looking exceptionally proud of his financial acumen. ENGINEER (round black glasses, white shirt, thin black tie) pinches the bridge of his nose in sheer exhaustion. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. Boss stands proudly with crossed arms, Engineer keeps his hand on his face.",
+      "action": "The boss nods smugly: \"To ensure economic stability, there is an eight-year vesting period on your weekly paycheck.\" The engineer stares forward: \"I am going to starve to death.\" Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "boss",
+          "To ensure economic stability, there is an eight-year vesting period on your weekly paycheck."
+        ],
+        [
+          "eng",
+          "I am going to starve to death."
+        ]
+      ]
+    },
+    {
+      "name": "s5_blood",
+      "keyframe": "Wide shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) leans forward slightly, offering a helpful, beaming smile. ENGINEER (round black glasses, white shirt, thin black tie) stares straight ahead with a thousand-yard stare. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. Boss smiling uncomfortably wide, Engineer perfectly still and deadpan.",
+      "action": "The boss leans in brightly: \"We anticipated that! The breakroom vending machine now accepts human blood.\" The engineer replies without blinking: \"What is the exchange rate?\" Each character's mouth moves ONLY while that character is speaking.",
+      "lines": [
+        [
+          "boss",
+          "We anticipated that! The breakroom vending machine now accepts human blood."
+        ],
+        [
+          "eng",
+          "What is the exchange rate?"
+        ]
+      ],
+      "delivery": "Slightly faster pace to deliver the punchline quickly."
+    }
+  ],
+  "tts": {
+    "model": "gemini-2.5-flash-preview-tts",
+    "voices": {
+      "boss": "Fenrir",
+      "eng": "Iapetus"
+    },
+    "styles": {
+      "boss": "Say briskly and energetically, in a smug corporate-executive baritone brimming with fake enthusiasm and total unearned confidence: ",
+      "eng": "Say at a quick clip, in a flat, tired, deadpan monotone, utterly unimpressed: "
+    }
+  }
+}
