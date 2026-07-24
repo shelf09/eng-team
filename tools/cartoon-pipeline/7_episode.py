@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Stage 7 — episode writer.
 Generates a NEW episode of the corporate-satire cartoon: Gemini writes only the
-"scenes" array (dialogue + keyframe/end_keyframe prompts); the locked visual
+"scenes" array — 4 scenes (~30s video: 4x8s clips, dialogue-trimmed and
+crossfaded) of dialogue + keyframe/end_keyframe prompts; the locked visual
 style, cast voices, and tts config are copied verbatim from the current
 scenes.json so every episode looks and sounds like the same show.
 
@@ -31,24 +32,24 @@ the decision with dry one-liners.
 GENRE: satire and dry humor about the corporate world constantly making stupid
 decisions (RTO mandates with no desks, AI replacing the team that built the AI,
 layoffs to fund retention bonuses, agile with fourteen standups...). The boss
-proposes/announces; the engineer deadpans; scene 5 lands the punchline. Funny
+proposes/announces; the engineer deadpans; scene 4 lands the punchline. Funny
 beats clever; specific beats generic; understatement beats shouting.
 
-LOOP STRUCTURE (the video autoplays on repeat, TikTok/Reels style): scene 5
+LOOP STRUCTURE (the video autoplays on repeat, TikTok/Reels style): scene 4
 must land its punchline AND hand off logically to scene 1, so that when the
-video loops, s5 -> s1 reads as the story continuing — e.g. the punchline
+video loops, s4 -> s1 reads as the story continuing — e.g. the punchline
 births the NEXT stupid decision that scene 1 opens with, or scene 1's opening
-line works equally as a reaction to scene 5's closer. Scene 5's end_keyframe
+line works equally as a reaction to scene 4's closer. Scene 4's end_keyframe
 must return both characters to poses compatible with scene 1's keyframe so
 the loop cut isn't jarring. Do NOT label the loop in dialogue — it must feel
 discovered, not announced.
 
 Return STRICT JSON only: {"slug": "<short_snake_case_episode_slug>",
-"loop_hook": "<one sentence: exactly how scene 5 hands off to scene 1 on
-loop>", "scenes": [exactly 5 scene objects]} — no markdown, no commentary.
+"loop_hook": "<one sentence: exactly how scene 4 hands off to scene 1 on
+loop>", "scenes": [exactly 4 scene objects]} — no markdown, no commentary.
 
 Each scene object:
-- "name": "s<N>_<word>" (letters/digits/_/- only, N = 1..5 in order)
+- "name": "s<N>_<word>" (letters/digits/_/- only, N = 1..4 in order)
 - "keyframe": image prompt for the scene's FIRST frame. Describe both
   characters' poses/expressions and the shot. Always include: the SAME
   blue-gray glass-walled office (glass panels, blue code monitor, potted
@@ -101,10 +102,10 @@ def validate(ep):
         errs.append("bad or missing slug")
     if isinstance(ep, dict) and not (
             isinstance(ep.get("loop_hook"), str) and ep["loop_hook"].strip()):
-        errs.append("missing loop_hook — the episode must loop s5 back into s1")
+        errs.append("missing loop_hook — the episode must loop s4 back into s1")
     scenes = ep.get("scenes") if isinstance(ep, dict) else None
-    if not (isinstance(scenes, list) and len(scenes) == 5):
-        return errs + ["scenes must be a list of exactly 5"]
+    if not (isinstance(scenes, list) and len(scenes) == 4):
+        return errs + ["scenes must be a list of exactly 4"]
     seen = set()
     for i, sc in enumerate(scenes):
         where = f"scene {i+1}"

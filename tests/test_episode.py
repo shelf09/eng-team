@@ -27,7 +27,7 @@ GOOD_SCENES = [
         "action": f'The boss says: "Line {i}." The engineer replies flatly: "Reply {i}."',
         "lines": [["boss", f"Line {i}."], ["eng", f"Reply {i}."]],
     }
-    for i in range(1, 6)
+    for i in range(1, 5)
 ]
 
 GOOD_EPISODE = {
@@ -86,7 +86,7 @@ class EpisodeGeneratorTests(unittest.TestCase):
         self.assertEqual(active["voices"], "VOICES")
         self.assertEqual(active["tts"], SEED["tts"])
         # scenes come from the model
-        self.assertEqual(len(active["scenes"]), 5)
+        self.assertEqual(len(active["scenes"]), 4)
         self.assertEqual(active["scenes"][0]["name"], "s1_thing1")
         # the topic reached the prompt
         self.assertIn("return to office", self.requests[0]["contents"][0]["parts"][0]["text"])

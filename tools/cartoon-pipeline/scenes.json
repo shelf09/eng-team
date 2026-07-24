@@ -1,87 +1,75 @@
 {
   "episode": "unlimited_pto_trap",
-  "loop_hook": "The Engineer desperately asks what the company is doing for employee wellbeing, prompting the Boss to answer by proudly repeating his tone-deaf announcement.",
+  "loop_hook": "Scene 4 ends with the boss telling the engineer to appreciate a perk, which seamlessly runs into his opening announcement of that exact perk in scene 1.",
   "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
   "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
   "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
   "scenes": [
     {
       "name": "s1_announcement",
-      "keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on his hips, beaming. The Engineer (round black glasses, white shirt, thin black tie) sits slouched at his desk, staring ahead deadpan. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on his hips, beaming. The Engineer (round black glasses, white shirt, thin black tie) sits slouched at his desk, staring ahead deadpan. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The Boss beams and announces loudly: \"I am proud to announce our new Unlimited PTO policy!\" The Engineer stares blankly and replies flatly: \"Great. Can I take tomorrow off?\" Each character's mouth moves ONLY while that character is speaking.",
+      "keyframe": "2D cartoon style. Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on hips, smiling. ENGINEER (round black glasses, white shirt, thin black tie) sits at a desk, staring blankly. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "2D cartoon style. Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on hips. ENGINEER (round black glasses, white shirt, thin black tie) sits at a desk, staring blankly. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
+      "action": "The boss smiles and speaks proudly: \"We are officially an Unlimited PTO company! Infinite days off!\" The engineer stares blankly and replies: \"My accrual balance just changed to zero.\" Each character's mouth moves ONLY while that character is speaking.",
       "lines": [
         [
           "boss",
-          "I am proud to announce our new Unlimited PTO policy!"
+          "We are officially an Unlimited PTO company! Infinite days off!"
         ],
         [
           "eng",
-          "Great. Can I take tomorrow off?"
+          "My accrual balance just changed to zero."
         ]
       ]
     },
     {
-      "name": "s2_approvals",
-      "keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) wags a finger with a smug smile. The Engineer (round black glasses, white shirt, thin black tie) rubs his temples wearily. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) holds his finger up. The Engineer (round black glasses, white shirt, thin black tie) keeps his hand on his temple. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The Boss wags a finger with a smug smile: \"No. Unlimited PTO requires a three-month notice and six approvals.\" The Engineer rubs his temples wearily: \"From the executive board that meets annually?\" Each character's mouth moves ONLY while that character is speaking.",
+      "name": "s2_trust",
+      "keyframe": "2D cartoon style. Medium shot. The boss leans forward slightly, gesturing expansively with one hand, looking overly confident. The engineer remains slouched at his desk, looking exhausted. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "2D cartoon style. Medium shot. The boss leans forward slightly, gesturing expansively with one hand, looking overly confident. The engineer remains slouched at his desk, looking exhausted. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
+      "action": "The boss gestures expansively: \"Because we don't track it! It's a culture of trust.\" The engineer doesn't blink, replying flatly: \"I trust I can take tomorrow off.\" Each character's mouth moves ONLY while that character is speaking.",
       "lines": [
         [
           "boss",
-          "No. Unlimited PTO requires a three-month notice and six approvals."
+          "Because we don't track it! It's a culture of trust."
         ],
         [
           "eng",
-          "From the executive board that meets annually?"
+          "I trust I can take tomorrow off."
         ]
       ]
     },
     {
-      "name": "s3_optimized",
-      "keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) nods enthusiastically, leaning in. The Engineer (round black glasses, white shirt, thin black tie) slowly blinks, looking completely dead inside. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) remains leaned in. The Engineer (round black glasses, white shirt, thin black tie) stares ahead, dead inside. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The Boss nods enthusiastically: \"Yes! We must ensure we only approve highly optimized vacations.\" The Engineer deadpans: \"So it's functionally zero PTO.\" Each character's mouth moves ONLY while that character is speaking.",
+      "name": "s3_approval",
+      "keyframe": "2D cartoon style. Two-shot. The boss stands upright, wagging a finger sternly with a serious, bureaucratic expression. The engineer looks up slightly at the boss, deadpan. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "2D cartoon style. Two-shot. The boss stands upright, wagging a finger sternly with a serious, bureaucratic expression. The engineer looks up slightly at the boss, deadpan. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
+      "action": "The boss wags a finger sternly: \"Request denied. All unlimited time requires business-need approval.\" The engineer sighs: \"Will you approve next Friday?\" Each character's mouth moves ONLY while that character is speaking.",
       "lines": [
         [
           "boss",
-          "Yes! We must ensure we only approve highly optimized vacations."
+          "Request denied. All unlimited time requires business-need approval."
         ],
         [
           "eng",
-          "So it's functionally zero PTO."
+          "Will you approve next Friday?"
         ]
       ]
     },
     {
-      "name": "s4_paper",
-      "keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) gives a confident thumbs-up. The Engineer (round black glasses, white shirt, thin black tie) slumps forward over his keyboard. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) holds the thumbs-up. The Engineer (round black glasses, white shirt, thin black tie) stays slumped over the keyboard. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The Boss gives a confident thumbs-up: \"It's unlimited on paper! We just deny all the requests.\" The Engineer speaks into his keyboard: \"I haven't slept since Tuesday.\" Each character's mouth moves ONLY while that character is speaking.",
+      "name": "s4_zero",
+      "keyframe": "2D cartoon style. Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands with arms crossed, looking dismissive. ENGINEER (round black glasses, white shirt, thin black tie) sits at his desk, staring completely dead-eyed at the camera. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
+      "end_keyframe": "2D cartoon style. Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on hips, smiling. ENGINEER (round black glasses, white shirt, thin black tie) sits at a desk, staring blankly. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
+      "action": "The boss crosses his arms: \"Denied. You have critical deliverables indefinitely.\" The engineer stares dead-eyed: \"So I get zero days.\" The boss drops his arms to his hips, smiling proudly: \"Exactly! Which is why you should appreciate that...\" Each character's mouth moves ONLY while that character is speaking.",
       "lines": [
         [
           "boss",
-          "It's unlimited on paper! We just deny all the requests."
+          "Denied. You have critical deliverables indefinitely."
         ],
         [
           "eng",
-          "I haven't slept since Tuesday."
-        ]
-      ]
-    },
-    {
-      "name": "s5_wellbeing",
-      "keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) puffs out his chest with hands on his hips. The Engineer (round black glasses, white shirt, thin black tie) sits at his desk, looking exhausted but looking up at the boss. SAME blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "Medium shot. The Boss (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on his hips, beaming. The Engineer (round black glasses, white shirt, thin black tie) sits slouched at his desk, staring ahead deadpan. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The Boss puffs out his chest: \"Sleep is for people without equity! Keep coding.\" The Engineer sighs flatly: \"I'm burning out. What are you doing for employee wellbeing?\" Each character's mouth moves ONLY while that character is speaking.",
-      "lines": [
+          "So I get zero days."
+        ],
         [
           "boss",
-          "Sleep is for people without equity! Keep coding."
-        ],
-        [
-          "eng",
-          "I'm burning out. What are you doing for employee wellbeing?"
+          "Exactly! Which is why you should appreciate that..."
         ]
       ]
     }
