@@ -56,6 +56,8 @@ dub_lib.py         Shared audio/alignment utilities for stages 4-5.
 ```bash
 python3 7_episode.py [topic]      # optional: write + activate a new episode
 python3 0_chain.py                # keyframes -> Veo per scene, fail-fast
+                                  #   default veo-3.1-lite: ~$0.40/scene
+python3 0_chain.py --hq           # veo-3.1-fast instead (2x cost) for finals
 python3 0_chain.py --heygen       # ... plus HeyGen lip-sync per clip (uploads!)
 bash 3_compose.sh out.mp4
 ```
