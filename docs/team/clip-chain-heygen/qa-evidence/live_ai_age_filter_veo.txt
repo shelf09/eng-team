@@ -42,3 +42,15 @@ FINISHED 1/1: ['s4_training']
 FINISHED 1/1: ['s5_terminated']
 CHAIN COMPLETE: 5 scene(s) (heygen skipped)
 exit=0
+$ re-roll s1 (text overlay): python3 0_chain.py s1_dinosaurs   (Mon Jul 20 21:51:31 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/builds/20260720_ai_age_filter
+=== s1_dinosaurs ===
+[s1_dinosaurs] exists, skipping
+[s1_dinosaurs_end] exists, skipping
+[s1_dinosaurs] op models/veo-3.1-fast-generate-preview/operations/hvlzatspuafp
+[   0s] pending: ['s1_dinosaurs']
+[  32s] pending: ['s1_dinosaurs']
+[s1_dinosaurs] DONE 1156 KB
+FINISHED 1/1: ['s1_dinosaurs']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+exit=0

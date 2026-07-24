@@ -24,3 +24,6 @@ videos/*
 tools/cartoon-pipeline/build/
 tools/cartoon-pipeline/build-*/
 tools/cartoon-pipeline/builds/
+
+# macOS noise
+.DS_Store
