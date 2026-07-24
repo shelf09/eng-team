@@ -1,6 +1,6 @@
 {
   "episode": "unlimited_pto_trap",
-  "loop_hook": "Scene 4 ends with the boss telling the engineer to appreciate a perk, which seamlessly runs into his opening announcement of that exact perk in scene 1.",
+  "loop_hook": "Scene 4 closes with the engineer asking whatever happened to unlimited \u2014 and on loop, scene 1's proud announcement of Unlimited PTO is the boss's tone-deaf answer.",
   "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
   "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
   "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
@@ -23,9 +23,9 @@
     },
     {
       "name": "s2_trust",
-      "keyframe": "2D cartoon style. Medium shot. The boss leans forward slightly, gesturing expansively with one hand, looking overly confident. The engineer remains slouched at his desk, looking exhausted. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
-      "end_keyframe": "2D cartoon style. Medium shot. The boss leans forward slightly, gesturing expansively with one hand, looking overly confident. The engineer remains slouched at his desk, looking exhausted. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss gestures expansively: \"Because we don't track it! It's a culture of trust.\" The engineer doesn't blink, replying flatly: \"I trust I can take tomorrow off.\" Each character's mouth moves ONLY while that character is speaking.",
+      "keyframe": "2D cartoon style. Medium shot. The boss leans forward slightly, gesturing expansively with one hand, looking overly confident. The engineer remains slouched at his desk, looking exhausted. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere. The office behind the glass is COMPLETELY EMPTY \u2014 no people, no silhouettes, nobody at any desk, not even blurred figures. Both characters have normal compact proportions: normal-length neck, normal-sized head, exactly like the reference images.",
+      "end_keyframe": "2D cartoon style. Medium shot. The boss leans forward slightly, gesturing expansively with one hand, looking overly confident. The engineer remains slouched at his desk, looking exhausted. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere. The office behind the glass is COMPLETELY EMPTY \u2014 no people, no silhouettes, nobody at any desk, not even blurred figures. Both characters have normal compact proportions: normal-length neck, normal-sized head, exactly like the reference images.",
+      "action": "The boss gestures expansively: \"Because we don't track it! It's a culture of trust.\" The engineer doesn't blink, replying flatly: \"I trust I can take tomorrow off.\" Each character's mouth moves ONLY while that character is speaking. Both characters keep their exact reference proportions throughout \u2014 normal neck length, no stretching or elongation of heads or bodies.",
       "lines": [
         [
           "boss",
@@ -57,19 +57,15 @@
       "name": "s4_zero",
       "keyframe": "2D cartoon style. Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands with arms crossed, looking dismissive. ENGINEER (round black glasses, white shirt, thin black tie) sits at his desk, staring completely dead-eyed at the camera. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "2D cartoon style. Medium shot. BOSS (bald, two spiky hair tufts, navy suit, red tie) stands proudly with hands on hips, smiling. ENGINEER (round black glasses, white shirt, thin black tie) sits at a desk, staring blankly. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss crosses his arms: \"Denied. You have critical deliverables indefinitely.\" The engineer stares dead-eyed: \"So I get zero days.\" The boss drops his arms to his hips, smiling proudly: \"Exactly! Which is why you should appreciate that...\" Each character's mouth moves ONLY while that character is speaking.",
+      "action": "The boss, arms crossed, booms smugly: \"Denied! You have critical deliverables indefinitely.\" \u2014 during this ONLY the boss's mouth moves; the engineer sits still, mouth FIRMLY CLOSED. Then the engineer stares dead ahead and says flatly: \"So I get zero days. Whatever happened to unlimited?\" \u2014 only the engineer's mouth moves; the boss holds his smug pose, mouth closed. At no point do both mouths move at the same time.",
       "lines": [
         [
           "boss",
-          "Denied. You have critical deliverables indefinitely."
+          "Denied! You have critical deliverables indefinitely."
         ],
         [
           "eng",
-          "So I get zero days."
-        ],
-        [
-          "boss",
-          "Exactly! Which is why you should appreciate that..."
+          "So I get zero days. Whatever happened to unlimited?"
         ]
       ]
     }
