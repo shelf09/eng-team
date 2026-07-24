@@ -34,8 +34,18 @@ layoffs to fund retention bonuses, agile with fourteen standups...). The boss
 proposes/announces; the engineer deadpans; scene 5 lands the punchline. Funny
 beats clever; specific beats generic; understatement beats shouting.
 
+LOOP STRUCTURE (the video autoplays on repeat, TikTok/Reels style): scene 5
+must land its punchline AND hand off logically to scene 1, so that when the
+video loops, s5 -> s1 reads as the story continuing — e.g. the punchline
+births the NEXT stupid decision that scene 1 opens with, or scene 1's opening
+line works equally as a reaction to scene 5's closer. Scene 5's end_keyframe
+must return both characters to poses compatible with scene 1's keyframe so
+the loop cut isn't jarring. Do NOT label the loop in dialogue — it must feel
+discovered, not announced.
+
 Return STRICT JSON only: {"slug": "<short_snake_case_episode_slug>",
-"scenes": [exactly 5 scene objects]} — no markdown, no commentary.
+"loop_hook": "<one sentence: exactly how scene 5 hands off to scene 1 on
+loop>", "scenes": [exactly 5 scene objects]} — no markdown, no commentary.
 
 Each scene object:
 - "name": "s<N>_<word>" (letters/digits/_/- only, N = 1..5 in order)
@@ -89,6 +99,9 @@ def validate(ep):
     errs = []
     if not (isinstance(ep, dict) and re.fullmatch(NAME_RE, str(ep.get("slug", "")))):
         errs.append("bad or missing slug")
+    if isinstance(ep, dict) and not (
+            isinstance(ep.get("loop_hook"), str) and ep["loop_hook"].strip()):
+        errs.append("missing loop_hook — the episode must loop s5 back into s1")
     scenes = ep.get("scenes") if isinstance(ep, dict) else None
     if not (isinstance(scenes, list) and len(scenes) == 5):
         return errs + ["scenes must be a list of exactly 5"]
@@ -144,7 +157,7 @@ def main(argv=None):
         sys.exit("episode generation failed twice — try a different topic")
 
     seed = json.load(open(os.path.join(HERE, "scenes.json")))
-    full = {"episode": ep["slug"],
+    full = {"episode": ep["slug"], "loop_hook": ep["loop_hook"],
             "style_image": seed["style_image"], "style_video": seed["style_video"],
             "voices": seed["voices"], "scenes": ep["scenes"], "tts": seed["tts"]}
     epdir = os.path.join(HERE, "episodes")
@@ -153,6 +166,7 @@ def main(argv=None):
     json.dump(full, open(path, "w"), indent=2)
     json.dump(full, open(os.path.join(HERE, "scenes.json"), "w"), indent=2)
     print(f"episode saved to {path} and activated as scenes.json", flush=True)
+    print(f"loop hook: {ep['loop_hook']}", flush=True)
     for sc in ep["scenes"]:
         print(f"[{sc['name']}]")
         for who, text in sc["lines"]:

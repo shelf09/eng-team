@@ -30,7 +30,12 @@ GOOD_SCENES = [
     for i in range(1, 6)
 ]
 
-GOOD_EPISODE = {"slug": "rto_no_desks", "scenes": GOOD_SCENES}
+GOOD_EPISODE = {
+    "slug": "rto_no_desks",
+    "loop_hook": "Scene 5's final line announces a new mandate, which is exactly "
+                 "what scene 1 opens reacting to — the loop reads as continuous.",
+    "scenes": GOOD_SCENES,
+}
 
 
 def gemini_response(payload):
@@ -102,6 +107,11 @@ class EpisodeGeneratorTests(unittest.TestCase):
         bad_scenes = [dict(s) for s in GOOD_SCENES]
         del bad_scenes[2]["end_keyframe"]
         bad = {"slug": "x", "scenes": bad_scenes}
+        with self.assertRaises(SystemExit):
+            self.run_main([gemini_response(bad), gemini_response(bad)], ["t"])
+
+    def test_missing_loop_hook_is_rejected(self):
+        bad = {k: v for k, v in GOOD_EPISODE.items() if k != "loop_hook"}
         with self.assertRaises(SystemExit):
             self.run_main([gemini_response(bad), gemini_response(bad)], ["t"])
 
