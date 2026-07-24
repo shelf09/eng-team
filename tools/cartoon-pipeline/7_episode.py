@@ -157,8 +157,8 @@ def main(argv=None):
         print(f"[{sc['name']}]")
         for who, text in sc["lines"]:
             print(f"  {who:4}: {text}")
-    print("next: python3 0_chain.py  (renders into its own builds/<date>_"
-          f"{ep['slug']} run dir)", flush=True)
+    print(f"next: python3 0_chain.py  (renders into videos/{ep['slug']}/"
+          "build-<date>/)", flush=True)
     return path
 
 

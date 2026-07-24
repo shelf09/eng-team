@@ -5,12 +5,13 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 # same run-dir resolution as 0_chain.py: $CARTOON_DIR, else the newest
-# builds/*_<episode-slug> run dir, else the legacy build/ dir
+# <repo>/videos/<episode>/build-* run dir, else the legacy build/ dir
 BASE="${CARTOON_DIR:-$(python3 - "$HERE" <<'PY'
 import glob, json, os, sys
 here = sys.argv[1]
+videos = os.path.join(os.path.dirname(os.path.dirname(here)), "videos")
 slug = json.load(open(os.path.join(here, "scenes.json"))).get("episode", "episode")
-prior = sorted(glob.glob(os.path.join(here, "builds", "*_" + slug)))
+prior = sorted(glob.glob(os.path.join(videos, slug, "build-*")))
 print(prior[-1] if prior else os.path.join(here, "build"))
 PY
 )}"

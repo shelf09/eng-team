@@ -101,6 +101,7 @@ class ChainRunDirTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.module = load_script({})
         self.module.HERE = self.tmp.name
+        self.module.VIDEOS = os.path.join(self.tmp.name, "videos")
         self.module.cfg = {"episode": "ep1", "scenes": [{"name": "a", "keyframe": "K"}]}
         self.calls = []
 
@@ -118,10 +119,10 @@ class ChainRunDirTests(unittest.TestCase):
             with mock.patch.object(self.module.subprocess, "run", fake_run):
                 self.module.main(argv)
 
-    def test_default_run_dir_is_dated_and_named_after_episode(self):
+    def test_default_run_dir_lives_under_videos_episode(self):
         self.run_chain([])
         expected = os.path.join(
-            self.tmp.name, "builds", time.strftime("%Y%m%d") + "_ep1"
+            self.tmp.name, "videos", "ep1", "build-" + time.strftime("%Y%m%d")
         )
         self.assertEqual(self.module.BASE, expected)
         # every stage subprocess inherits the resolved dir
@@ -129,7 +130,7 @@ class ChainRunDirTests(unittest.TestCase):
             self.assertEqual(kwargs["env"]["CARTOON_DIR"], expected)
 
     def test_existing_run_dir_for_the_episode_is_reused(self):
-        prior = Path(self.tmp.name) / "builds" / "20240101_ep1"
+        prior = Path(self.tmp.name) / "videos" / "ep1" / "build-20240101"
         prior.mkdir(parents=True)
         self.run_chain([])
         self.assertEqual(self.module.BASE, str(prior))

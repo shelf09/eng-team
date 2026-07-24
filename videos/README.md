@@ -1,9 +1,10 @@
 # videos/
 
-Finished deliverables and their iterations, one folder per episode.
-Build intermediates (keyframes, clips, dubs) stay in
-`tools/cartoon-pipeline/builds/<date>_<episode>/`; new finals land here —
-`bash 3_compose.sh <repo>/videos/<episode>/<episode>.mp4`.
+Everything for an episode in one folder: finished deliverables at the top,
+render workspaces in `build-<YYYYMMDD>/` beside them (clips, keyframes, tts
+cache — what the pipeline needs to re-roll a scene without re-paying).
+The chain and compose resolve the build folder automatically; stitch finals
+here — `bash 3_compose.sh <repo>/videos/<episode>/<episode>.mp4`.
 This whole directory is gitignored (binaries stay out of the repo).
 
 ## ai_age_filter — AI hiring / age-discrimination satire (Jul 2026)
