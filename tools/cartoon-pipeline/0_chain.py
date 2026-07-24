@@ -39,8 +39,10 @@ def resolve_base():
         return prior[-1]
     return os.path.join(VIDEOS, slug, "build-" + time.strftime("%Y%m%d"))
 
+EXTRA_ENV = {}
+
 def run(argv, stage, scene):
-    r = subprocess.run(argv, env=dict(os.environ, CARTOON_DIR=BASE))
+    r = subprocess.run(argv, env=dict(os.environ, CARTOON_DIR=BASE, **EXTRA_ENV))
     if r.returncode != 0:
         sys.exit(f"CHAIN STOPPED at {scene} / {stage} (exit {r.returncode})")
 
@@ -65,8 +67,13 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="per-scene keyframes->Veo->HeyGen chain")
     ap.add_argument("--heygen", action="store_true",
                     help="lip-sync each clip with HeyGen (uploads clip + audio)")
+    ap.add_argument("--hq", action="store_true",
+                    help="render with veo-3.1-fast (2x cost; default is lite)")
     ap.add_argument("scenes", nargs="*", help="scene names (default: all)")
     args = ap.parse_args(argv)
+
+    if args.hq:
+        EXTRA_ENV["VEO_MODEL"] = "veo-3.1-fast-generate-preview"
 
     global BASE
     BASE = resolve_base()

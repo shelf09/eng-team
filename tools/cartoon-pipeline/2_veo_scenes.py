@@ -12,7 +12,9 @@ import os, re, sys, json, time, base64, urllib.request, urllib.error
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.environ.get("CARTOON_DIR", os.path.join(HERE, "build"))
 KEY = os.environ["GEMINI_API_KEY"]
-MODEL = os.environ.get("VEO_MODEL", "veo-3.1-fast-generate-preview")
+# lite is the default: half fast's price, same 8s/lastFrame contract, and the
+# dub + gates stack verified identical on this show's flat-2D style (Jul 2026)
+MODEL = os.environ.get("VEO_MODEL", "veo-3.1-lite-generate-preview")
 ROOT = "https://generativelanguage.googleapis.com/v1beta"
 
 cfg = json.load(open(os.path.join(HERE, "scenes.json")))

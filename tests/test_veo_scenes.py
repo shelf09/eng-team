@@ -69,6 +69,15 @@ class VeoLastFrameTests(unittest.TestCase):
 
 
 class VeoLiteModelTests(unittest.TestCase):
+    def test_default_model_is_lite(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.dict(os.environ, {"CARTOON_DIR": tmp, "GEMINI_API_KEY": "k"}):
+                os.environ.pop("VEO_MODEL", None)
+                spec = importlib.util.spec_from_file_location("veo_default", SCRIPT)
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+        self.assertEqual(module.MODEL, "veo-3.1-lite-generate-preview")
+
     def test_lite_model_omits_unsupported_negative_prompt(self):
         with tempfile.TemporaryDirectory() as tmp:
             (Path(tmp) / "keyframes").mkdir()

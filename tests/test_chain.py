@@ -139,6 +139,18 @@ class ChainRunDirTests(unittest.TestCase):
         self.run_chain([], extra_env={"CARTOON_DIR": "/explicit/dir"})
         self.assertEqual(self.module.BASE, "/explicit/dir")
 
+    def test_hq_flag_selects_the_fast_model_for_stages(self):
+        self.run_chain(["--hq"])
+        for _, kwargs in self.calls:
+            self.assertEqual(kwargs["env"]["VEO_MODEL"], "veo-3.1-fast-generate-preview")
+
+    def test_default_run_does_not_force_a_model(self):
+        with mock.patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("VEO_MODEL", None)
+            self.run_chain([])
+        for _, kwargs in self.calls:
+            self.assertNotIn("VEO_MODEL", kwargs["env"])
+
 
 class ChainHeygenTests(unittest.TestCase):
     def setUp(self):
