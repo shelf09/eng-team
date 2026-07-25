@@ -1,0 +1,46 @@
+$ python3 0_chain.py   (fiber_sales_loop, lite default, Sat Jul 25 15:46:22 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725
+=== s1_disaster ===
+[s1_disaster] saved
+[s1_disaster_end] saved
+[s1_disaster] op models/veo-3.1-lite-generate-preview/operations/dzo22ggye52u
+[   0s] pending: ['s1_disaster']
+[s1_disaster] DONE 1439 KB
+FINISHED 1/1: ['s1_disaster']
+=== s2_exclusivity ===
+[s2_exclusivity] saved
+[s2_exclusivity_end] saved
+[s2_exclusivity] op models/veo-3.1-lite-generate-preview/operations/r2kq37b9rl1t
+[   0s] pending: ['s2_exclusivity']
+[s2_exclusivity] DONE 1088 KB
+FINISHED 1/1: ['s2_exclusivity']
+=== s3_accountability ===
+[s3_accountability] saved
+[s3_accountability_end] saved
+[s3_accountability] op models/veo-3.1-lite-generate-preview/operations/q4pg7hrezic8
+[   0s] pending: ['s3_accountability']
+[  32s] pending: ['s3_accountability']
+[s3_accountability] DONE 1323 KB
+FINISHED 1/1: ['s3_accountability']
+=== s4_explanation ===
+[s4_explanation] saved
+[s4_explanation_end] saved
+[s4_explanation] op models/veo-3.1-lite-generate-preview/operations/6dvfdp5loxhv
+[   0s] pending: ['s4_explanation']
+[  32s] pending: ['s4_explanation']
+[s4_explanation] DONE 1418 KB
+FINISHED 1/1: ['s4_explanation']
+CHAIN COMPLETE: 4 scene(s) (heygen skipped)
+exit=0
+$ s4 re-roll (extra person)   (Sat Jul 25 15:52:14 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725
+=== s4_explanation ===
+[s4_explanation] saved
+[s4_explanation_end] saved
+[s4_explanation] op models/veo-3.1-lite-generate-preview/operations/vt6kce61zrsb
+[   0s] pending: ['s4_explanation']
+[  32s] pending: ['s4_explanation']
+[s4_explanation] DONE 1367 KB
+FINISHED 1/1: ['s4_explanation']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+exit=0

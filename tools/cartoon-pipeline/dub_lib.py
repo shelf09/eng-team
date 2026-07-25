@@ -43,6 +43,31 @@ def norm(w):
         return _digits_to_words(t)
     return t
 
+def norm_tokens(s):
+    """Whitespace/hyphen-split, punctuation-stripped, digit-expanded tokens.
+    Both the script text and whisper's transcript pass through this, so
+    'twenty-one day' and '21-day' produce identical token lists."""
+    out = []
+    for raw in s.split():
+        for piece in raw.replace("-", " ").split():
+            t = re.sub(r"[^a-z0-9']", "", piece.lower())
+            if not t:
+                continue
+            m = re.fullmatch(r"(\d{1,2})([a-z']*)", t)
+            if m and int(m.group(1)) < 100:
+                n = int(m.group(1))
+                if n < 20:
+                    out.append(_ONES[n])
+                else:
+                    out.append(_TENS[n // 10])
+                    if n % 10:
+                        out.append(_ONES[n % 10])
+                if m.group(2):
+                    out.append(m.group(2))
+            else:
+                out.append(t)
+    return out
+
 # ---------- RMS envelope measurement ----------
 
 def _read_mono16k(path, band=False):
@@ -126,9 +151,9 @@ def take_missing_words(model, wav, text, vad=True):
     vad=False for mix segments: VAD boundaries wobble against the noise bed and
     clip function words that a plain listen hears fine."""
     segs, _ = model.transcribe(wav, language="en", vad_filter=vad, beam_size=5)
-    heard = [norm(w) for seg in segs for w in seg.text.split() if norm(w)]
+    heard = [t for seg in segs for t in norm_tokens(seg.text)]
     pos, missing = 0, []
-    for lw in (norm(w) for w in text.split() if norm(w)):
+    for lw in norm_tokens(text):
         hit = None
         for j in range(pos, min(pos + 6, len(heard))):
             if heard[j] == lw or difflib.SequenceMatcher(None, heard[j], lw).ratio() > 0.7:

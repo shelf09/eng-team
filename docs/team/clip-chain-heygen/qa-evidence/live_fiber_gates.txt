@@ -1,0 +1,189 @@
+$ s4 clip re-roll + dub + gates + stitch   (Sat Jul 25 15:55:42 CDT 2026)
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725
+=== s4_explanation ===
+[s4_explanation] exists, skipping
+[s4_explanation_end] exists, skipping
+[s4_explanation] op models/veo-3.1-lite-generate-preview/operations/thf3ituz9pzp
+[   0s] pending: ['s4_explanation']
+[  32s] pending: ['s4_explanation']
+[s4_explanation] DONE 1388 KB
+FINISHED 1/1: ['s4_explanation']
+CHAIN COMPLETE: 1 scene(s) (heygen skipped)
+[s1_disaster] flap windows: [[np.float64(0.0), np.float64(3.08)], [np.float64(3.42), np.float64(7.26)]]
+  tts s1_disaster_0 [boss] 4.09s
+    line0 [boss] speech  0.00- 3.08 (flap 0.00-3.08, tempo 1.15)
+  tts s1_disaster_1 [eng] 4.97s
+    line1 [eng ] speech  3.42- 7.26 (flap 3.42-7.26, tempo 1.14)
+[s1_disaster] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s1_disaster_dub.mp4
+[s2_exclusivity] flap windows: [[np.float64(0.0), np.float64(3.6)], [np.float64(4.08), np.float64(7.24)]]
+  tts s2_exclusivity_0 [boss] 5.49s
+    s2_exclusivity_0: take is missing ['twentyone'] — re-rolling
+  tts s2_exclusivity_0 [boss] 4.53s
+    s2_exclusivity_0: take is missing ['twentyone'] — EXCLUDED
+  tts s2_exclusivity_0_fast [boss] 3.73s
+    s2_exclusivity_0_fast: take is missing ['twentyone'] — re-rolling
+  tts s2_exclusivity_0_fast [boss] 2.73s
+    s2_exclusivity_0_fast: take is missing ['vendor', 'twentyone', 'window'] — EXCLUDED
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 204, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 165, in dub_scene
+    raise RuntimeError(f"{name} line {i}: every TTS take dropped words — "
+                       f"try rewording the line or re-running")
+RuntimeError: s2_exclusivity line 0: every TTS take dropped words — try rewording the line or re-running
+$ resume dub (tokenizer fixed)   (Sat Jul 25 16:00:10 CDT 2026)
+    line0 [boss] speech  0.00- 3.08 (flap 0.00-3.08, tempo 1.15)
+    line1 [eng ] speech  3.42- 7.26 (flap 3.42-7.26, tempo 1.14)
+[s1_disaster] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s1_disaster_dub.mp4
+  tts s2_exclusivity_0 [boss] 4.97s
+    line0 [boss] speech  0.00- 3.60 (flap 0.00-3.60, tempo 1.23)
+  tts s2_exclusivity_1 [eng] 3.81s
+  tts s2_exclusivity_1_measured [eng] 4.13s
+  tts s2_exclusivity_1_slow [eng] 9.81s
+    line1 [eng ] measured speech  4.08- 7.24 (flap 4.08-7.24, tempo 1.17)
+[s2_exclusivity] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s2_exclusivity_dub.mp4
+[s3_accountability] flap windows: [[np.float64(0.0), np.float64(3.4)], [np.float64(3.76), np.float64(7.46)]]
+  tts s3_accountability_0 [boss] 4.69s
+    line0 [boss] speech  0.00- 3.40 (flap 0.00-3.40, tempo 1.22)
+  tts s3_accountability_1 [eng] 5.49s
+    line1 [eng ] speech  3.76- 7.46 (flap 3.76-7.46, tempo 1.34)
+[s3_accountability] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s3_accountability_dub.mp4
+[s4_explanation] flap windows: [[np.float64(0.0), np.float64(4.42)], [np.float64(5.68), np.float64(7.38)]]
+  tts s4_explanation_0 [boss] 5.29s
+    line0 [boss] speech  0.00- 4.42 (flap 0.00-4.42, tempo 1.09)
+  tts s4_explanation_1 [eng] 2.09s
+  tts s4_explanation_1_measured [eng] 3.53s
+Traceback (most recent call last):
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 204, in <module>
+    dub_scene(by_name[n], model_holder)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 161, in dub_scene
+    pw = valid_take(model_holder, f"{name}_{i}", who, text, delivery, pace)
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 125, in valid_take
+    wav = tts(line_id, who, text, delivery, pace)
+  File "/Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/tools/cartoon-pipeline/4_dub_voices.py", line 58, in tts
+    with urllib.request.urlopen(req, timeout=120) as r:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.2/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+$ resume dub (429 backoff in place)   (Sat Jul 25 16:02:53 CDT 2026)
+    line0 [boss] speech  0.00- 3.08 (flap 0.00-3.08, tempo 1.15)
+    line1 [eng ] speech  3.42- 7.26 (flap 3.42-7.26, tempo 1.14)
+[s1_disaster] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s1_disaster_dub.mp4
+    line0 [boss] speech  0.00- 3.60 (flap 0.00-3.60, tempo 1.23)
+    line1 [eng ] measured speech  4.08- 7.24 (flap 4.08-7.24, tempo 1.17)
+[s2_exclusivity] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s2_exclusivity_dub.mp4
+    line0 [boss] speech  0.00- 3.40 (flap 0.00-3.40, tempo 1.22)
+    line1 [eng ] speech  3.76- 7.46 (flap 3.76-7.46, tempo 1.34)
+[s3_accountability] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s3_accountability_dub.mp4
+    line0 [boss] speech  0.00- 4.42 (flap 0.00-4.42, tempo 1.09)
+  tts s4_explanation_1_slow [eng] 6.53s
+    line1 [eng ] speech  5.68- 7.24 (flap 5.68-7.38, tempo 0.90)
+[s4_explanation] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s4_explanation_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+[s1_disaster] TRANSCRIPT WARNING (unheard in mix re-listen): ['at']
+s1_disaster      0   0.02- 3.00   0.00- 3.08   +0.02    -0.08    97%   1.15  PASS
+s1_disaster      1   3.02- 7.20   3.42- 7.26   -0.40    -0.06    98%   1.14  FAIL
+s2_exclusivity   0   0.02- 3.60   0.00- 3.60   +0.02    +0.00    99%   1.23  PASS
+s2_exclusivity   1   4.08- 7.24   4.08- 7.24   +0.00    +0.00   100%   1.17  PASS
+s3_accountability 0   0.02- 3.34   0.00- 3.40   +0.02    -0.06    98%   1.22  PASS
+s3_accountability 1   3.76- 7.46   3.76- 7.46   +0.00    +0.00   100%   1.33  PASS
+s4_explanation   0   0.02- 4.40   0.00- 4.42   +0.02    -0.02    99%   1.09  PASS
+s4_explanation   1   5.68- 7.20   5.68- 7.38   +0.00    -0.18    89%   0.90  FAIL
+
+2 check(s) FAIL
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_disaster      0  boss  moving      still       PASS  The boss speaks with varied open mouth shapes throughout the
+s1_disaster      1  eng   still       moving      PASS  The engineer speaks throughout the sequence while the boss k
+s2_exclusivity   0  boss  moving      still       PASS  The boss displays active mouth shapes speaking throughout th
+s2_exclusivity   1  eng   still       moving      PASS  The engineer speaks actively across multiple frames while th
+s3_accountability 0  boss  moving      still       PASS  Boss speaks with visible mouth movement while the engineer r
+s3_accountability 1  eng   still       moving      PASS  The engineer speaks continuously across the frames while the
+s4_explanation   0  boss  moving      still       PASS  The Boss demonstrates sustained mouth animation while speaki
+s4_explanation   1  eng   still       moving      PASS  The engineer is actively speaking across the frames while th
+
+ALL LINES PASS
+sync exit=1 speaker exit=0
+GATES NOT CLEAN — no stitch
+$ take re-rolls s1/s4 + gates + stitch   (Sat Jul 25 16:04:39 CDT 2026)
+    line0 [boss] speech  0.00- 3.08 (flap 0.00-3.08, tempo 1.15)
+  tts s1_disaster_1 [eng] 4.89s
+    line1 [eng ] speech  3.42- 7.26 (flap 3.42-7.26, tempo 1.13)
+[s1_disaster] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s1_disaster_dub.mp4
+    line0 [boss] speech  0.00- 4.42 (flap 0.00-4.42, tempo 1.09)
+  tts s4_explanation_1 [eng] 2.41s
+    line1 [eng ] speech  5.68- 7.38 (flap 5.68-7.38, tempo 1.14)
+[s4_explanation] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s4_explanation_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_disaster      0   0.02- 3.00   0.00- 3.08   +0.02    -0.08    97%   1.15  PASS
+s1_disaster      1   3.02- 7.20   3.42- 7.26   -0.40    -0.06    98%   1.12  FAIL
+s2_exclusivity   0   0.02- 3.60   0.00- 3.60   +0.02    +0.00    99%   1.23  PASS
+s2_exclusivity   1   4.08- 7.24   4.08- 7.24   +0.00    +0.00   100%   1.17  PASS
+s3_accountability 0   0.02- 3.34   0.00- 3.40   +0.02    -0.06    98%   1.22  PASS
+s3_accountability 1   3.76- 7.46   3.76- 7.46   +0.00    +0.00   100%   1.33  PASS
+s4_explanation   0   0.02- 4.40   0.00- 4.42   +0.02    -0.02    99%   1.09  PASS
+s4_explanation   1   5.68- 7.38   5.68- 7.38   +0.00    +0.00   100%   1.14  PASS
+
+1 check(s) FAIL
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_disaster      0  boss  moving      still       PASS  Boss actively speaks across the frames while Eng remains sil
+s1_disaster      1  eng   still       moving      PASS  The engineer speaks actively across multiple frames while th
+s4_explanation   0  boss  moving      still       PASS  The boss speaks continuously across the frames while the eng
+s4_explanation   1  eng   still       moving      PASS  The engineer is actively speaking while the boss keeps his m
+
+ALL LINES PASS
+sync exit=1 speaker exit=0
+GATES NOT CLEAN — no stitch
+  tts s1_disaster_0 [boss] 4.25s
+    line0 [boss] speech  0.00- 3.08 (flap 0.00-3.08, tempo 1.21)
+    line1 [eng ] speech  3.42- 7.26 (flap 3.42-7.26, tempo 1.13)
+[s1_disaster] -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725/clips/s1_disaster_dub.mp4
+done — now run 5_sync_check.py
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_disaster      0   0.02- 2.98   0.00- 3.08   +0.02    -0.10    96%   1.21  PASS
+s1_disaster      1   3.42- 7.20   3.42- 7.26   +0.00    -0.06    98%   1.12  PASS
+
+ALL LINES PASS
+sync exit=0
+$ final gates + stitch   (Sat Jul 25 16:06:27 CDT 2026)
+scene            ln voice         flap           st_off  end_off  cover  tempo  verdict
+s1_disaster      0   0.02- 2.98   0.00- 3.08   +0.02    -0.10    96%   1.21  PASS
+s1_disaster      1   3.42- 7.20   3.42- 7.26   +0.00    -0.06    98%   1.12  PASS
+s2_exclusivity   0   0.02- 3.60   0.00- 3.60   +0.02    +0.00    99%   1.23  PASS
+s2_exclusivity   1   4.08- 7.24   4.08- 7.24   +0.00    +0.00   100%   1.17  PASS
+s3_accountability 0   0.02- 3.34   0.00- 3.40   +0.02    -0.06    98%   1.22  PASS
+s3_accountability 1   3.76- 7.46   3.76- 7.46   +0.00    +0.00   100%   1.33  PASS
+s4_explanation   0   0.02- 4.40   0.00- 4.42   +0.02    -0.02    99%   1.09  PASS
+s4_explanation   1   5.68- 7.38   5.68- 7.38   +0.00    +0.00   100%   1.14  PASS
+
+ALL LINES PASS
+scene            ln spk   boss_mouth  eng_mouth   verdict
+s1_disaster      0  boss  moving      still       PASS  Boss displays active mouth movement while Eng maintains a cl
+s1_disaster      1  eng   still       moving      PASS  The engineer displays active speech mouth movements while th
+
+ALL LINES PASS
+sync exit=0 speaker(s1) exit=0
+run dir: /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/build-20260725
+[s1_disaster] crop=720:1260:0:10 trim=7.610s
+[s2_exclusivity] crop=720:1260:0:10 trim=7.590s
+[s3_accountability] crop=720:1260:0:10 trim=7.810s
+[s4_explanation] crop=720:1260:0:10 trim=7.730s
+FINAL -> /Users/curthochwender/vs-code-projects/hochwender/claude-eng-team/videos/fiber_sales_loop/fiber_sales_loop.mp4 (29.933333s)
+STITCH DONE

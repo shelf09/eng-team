@@ -18,7 +18,7 @@ every scene, and aligns every line to the original clip's mouth movement:
 Requires: pip install faster-whisper (plus ffmpeg). Run between stages 2 and 3.
 Output: $CARTOON_DIR/clips/<scene>_dub.mp4 (3_compose.sh prefers these).
 TTS takes cache in $CARTOON_DIR/tts/ — delete a wav to re-roll that take."""
-import os, json, base64, urllib.request
+import os, json, base64, time, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.environ.get("CARTOON_DIR", os.path.join(HERE, "build"))
@@ -55,8 +55,17 @@ def tts(line_id, who, text, delivery="", pace=""):
            f"{TTS['model']}:generateContent?key={KEY}")
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        resp = json.load(r)
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                resp = json.load(r)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 3:
+                raise
+            wait = 30 * (attempt + 1)
+            print(f"  tts rate-limited (429) — waiting {wait}s", flush=True)
+            time.sleep(wait)
     pcm = None
     for part in resp.get("candidates", [{}])[0].get("content", {}).get("parts", []):
         if "inlineData" in part:
