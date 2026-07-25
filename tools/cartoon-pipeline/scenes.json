@@ -1,6 +1,6 @@
 {
   "episode": "fiber_sales_loop",
-  "loop_hook": "The engineer asks what the boss is still confused about, prompting the boss to immediately repeat his opening complaint about zero sales, seamlessly restarting the cycle.",
+  "loop_hook": "Scene 4's fix repeats the original blunder \u2014 another exclusivity window nobody will be told about \u2014 and the engineer's unanswered question rolls straight into the boss rediscovering zero sales in scene 1.",
   "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
   "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
   "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
@@ -9,7 +9,7 @@
       "name": "s1_disaster",
       "keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, his arms crossed stubbornly. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, hands in his pockets. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, leaning forward aggressively. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, expressionless. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss throws his arms open angrily: \"We have zero sales in the new fiber neighborhood!\" The engineer stares back blankly: \"Because you outsourced the launch to an external sales vendor.\" The boss's mouth moves ONLY while he speaks, and the engineer's mouth moves ONLY while he speaks.",
+      "action": "The boss throws his arms open angrily: \"We have zero sales in the new fiber neighborhood!\" The engineer stares back blankly: \"The network's perfect. Every house is not buying at full gigabit speed.\" The boss's mouth moves ONLY while he speaks, and the engineer's mouth moves ONLY while he speaks.",
       "lines": [
         [
           "boss",
@@ -17,7 +17,7 @@
         ],
         [
           "eng",
-          "Because you outsourced the launch to an external sales vendor."
+          "The network's perfect. Every house is not buying at full gigabit speed."
         ]
       ]
     },
@@ -25,11 +25,11 @@
       "name": "s2_exclusivity",
       "keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, leaning forward aggressively. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, expressionless. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, hands on his hips. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, rubbing his temple. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss scoffs indignantly: \"And they blew their twenty-one day exclusivity period!\" The engineer sighs heavily: \"Because nobody ever told them that they won the contract.\" The boss's mouth moves ONLY while speaking, and the engineer's mouth moves ONLY while speaking.",
+      "action": "The boss scoffs indignantly: \"And the vendor blew their twenty-one day exclusivity window!\" The engineer sighs heavily: \"Because nobody ever told them that they won the contract.\" The boss's mouth moves ONLY while speaking, and the engineer's mouth moves ONLY while speaking.",
       "lines": [
         [
           "boss",
-          "And they blew their twenty-one day exclusivity period!"
+          "And the vendor blew their twenty-one day exclusivity window!"
         ],
         [
           "eng",
@@ -57,15 +57,15 @@
       "name": "s4_explanation",
       "keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, pointing a demanding finger. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, staring deadpan into space. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, his arms crossed stubbornly. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, hands in his pockets. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss crosses his arms stubbornly: \"Then stop engineering paths. I need a full explanation.\" The engineer blinks slowly, lowering his arms: \"What exactly are you still confused about?\" The boss's mouth moves ONLY while speaking, and the engineer's mouth moves ONLY while speaking.",
+      "action": "The boss snaps his fingers, inspired, and announces grandly: \"The fix is obvious. We extend their exclusivity another twenty-one days.\" \u2014 only the boss's mouth moves; the engineer sits still, mouth FIRMLY CLOSED. Then the engineer looks straight at him, dead-eyed, and asks flatly: \"Should someone tell them this time?\" \u2014 only the engineer's mouth moves. At no point do both mouths move at the same time.",
       "lines": [
         [
           "boss",
-          "Then stop engineering paths. I need a full explanation."
+          "The fix is obvious. We extend their exclusivity another twenty-one days."
         ],
         [
           "eng",
-          "What exactly are you still confused about?"
+          "Should someone tell them this time?"
         ]
       ]
     }
