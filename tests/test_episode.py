@@ -110,6 +110,17 @@ class EpisodeGeneratorTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             self.run_main([gemini_response(bad), gemini_response(bad)], ["t"])
 
+    def test_three_line_scene_is_rejected(self):
+        bad_scenes = [dict(s) for s in GOOD_SCENES]
+        bad_scenes[1] = dict(
+            bad_scenes[1],
+            action=bad_scenes[1]["action"] + ' The boss adds: "Third beat."',
+            lines=bad_scenes[1]["lines"] + [["boss", "Third beat."]],
+        )
+        bad = {**GOOD_EPISODE, "scenes": bad_scenes}
+        with self.assertRaises(SystemExit):
+            self.run_main([gemini_response(bad), gemini_response(bad)], ["t"])
+
     def test_missing_loop_hook_is_rejected(self):
         bad = {k: v for k, v in GOOD_EPISODE.items() if k != "loop_hook"}
         with self.assertRaises(SystemExit):

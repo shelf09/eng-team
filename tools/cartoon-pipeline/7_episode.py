@@ -69,7 +69,8 @@ Each scene object:
 - optional "delivery": a pacing hint ONLY if the scene is rapid-fire.
 
 Hard limits: at most 26 spoken words per scene total (it must fit 8 seconds);
-2-3 lines per scene; every line's text appears verbatim inside "action"."""
+EXACTLY 2 lines per scene — the video model reliably animates two beats and
+reliably scrambles three; every line's text appears verbatim inside "action"."""
 
 
 def jreq(prompt):
@@ -122,6 +123,9 @@ def validate(ep):
         if not (isinstance(lines, list) and lines):
             errs.append(f"{where}: missing lines")
             continue
+        if len(lines) != 2:
+            errs.append(f"{where}: {len(lines)} lines — exactly 2 per scene "
+                        "(3-beat scenes scramble speaker attribution)")
         action = normalize(sc.get("action", ""))
         words = 0
         for line in lines:
