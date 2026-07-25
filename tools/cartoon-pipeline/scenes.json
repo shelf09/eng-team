@@ -1,9 +1,9 @@
 {
   "episode": "fiber_sales_loop",
   "loop_hook": "Scene 4's fix repeats the original blunder \u2014 another exclusivity window nobody will be told about \u2014 and the engineer's unanswered question rolls straight into the boss rediscovering zero sales in scene 1.",
-  "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is bald with two tall pointy black hair tufts, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
+  "style_image": "Flat vector cartoon, satirical corporate comic strip, bold clean outlines, muted office palette. Use the attached reference images for the EXACT character designs: the BOSS is a tall heavyset executive with receding silver-gray hair combed straight back, a long heavy-jawed face with slight jowls, deep-set eyes under heavy serious brows, navy suit, red tie, overconfident grin; the ENGINEER has round black glasses, white shirt, thin black tie, deadpan face. Vertical 9:16, both characters visible, medium shot. No text anywhere except where specified.",
   "style_video": "Flat 2D cartoon office comedy, keep the exact art style of the input image. Simple cartoon mouth-flap lip-sync, small natural gestures, characters stay in place. Static camera with a very slow push-in. No on-screen text, no subtitles.",
-  "voices": "The bald boss with two spiky hair tufts speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
+  "voices": "The silver-haired boss speaks in a smug, booming corporate baritone, overflowing with unearned confidence. The engineer with round glasses speaks in a flat, tired, deadpan monotone.",
   "scenes": [
     {
       "name": "s1_disaster",

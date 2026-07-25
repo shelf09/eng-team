@@ -24,7 +24,8 @@ NAME_RE = r"[A-Za-z0-9_-]+"
 MAX_WORDS = 26  # spoken words per scene that still fit an 8s clip
 
 BRIEF = """You write episodes of a 2D-cartoon office-comedy short. Fixed cast:
-BOSS (bald, two spiky hair tufts, navy suit, red tie) — smug, booming,
+BOSS (tall, heavyset, receding silver-gray hair combed straight back, long
+heavy-jawed face, heavy serious brows, navy suit, red tie) — smug, booming,
 overconfident, announces terrible decisions with total pride. ENGINEER (round
 black glasses, white shirt, thin black tie) — flat, tired, deadpan, punctures
 the decision with dry one-liners.
