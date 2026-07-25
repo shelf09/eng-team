@@ -41,7 +41,7 @@
       "name": "s3_accountability",
       "keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, hands on his hips. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, rubbing his temple. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, pointing a demanding finger. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, staring deadpan into space. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss points a demanding finger: \"A minor oversight! But someone has to answer for this.\" The engineer deadpans: \"I am a fiber engineer. I literally just dig trenches.\" The boss's mouth moves ONLY when speaking, and the engineer's mouth moves ONLY when speaking.",
+      "action": "The boss points a demanding finger: \"A minor oversight! But someone has to answer for this.\" The engineer deadpans: \"I am a fiber engineer. I literally just engineer the fiber paths.\" The boss's mouth moves ONLY when speaking, and the engineer's mouth moves ONLY when speaking.",
       "lines": [
         [
           "boss",
@@ -49,7 +49,7 @@
         ],
         [
           "eng",
-          "I am a fiber engineer. I literally just dig trenches."
+          "I am a fiber engineer. I literally just engineer the fiber paths."
         ]
       ]
     },
@@ -57,11 +57,11 @@
       "name": "s4_explanation",
       "keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, pointing a demanding finger. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, staring deadpan into space. The same blue-gray glass-walled office (glass panels, blue code monitor, potted plant). The background office must contain NO other people. ABSOLUTELY NO text anywhere.",
       "end_keyframe": "Medium shot. The smug boss (bald, two spiky hair tufts, navy suit, red tie) stands on the left, his arms crossed stubbornly. The tired engineer (round black glasses, white shirt, thin black tie) stands on the right, hands in his pockets. BOTH MOUTHS FULLY CLOSED. Same office, same lighting, same camera framing as the start frame. ABSOLUTELY NO text anywhere.",
-      "action": "The boss crosses his arms stubbornly: \"Well put down the shovel. I need a full explanation.\" The engineer blinks slowly, lowering his arms: \"What exactly are you still confused about?\" The boss's mouth moves ONLY while speaking, and the engineer's mouth moves ONLY while speaking.",
+      "action": "The boss crosses his arms stubbornly: \"Then stop engineering paths. I need a full explanation.\" The engineer blinks slowly, lowering his arms: \"What exactly are you still confused about?\" The boss's mouth moves ONLY while speaking, and the engineer's mouth moves ONLY while speaking.",
       "lines": [
         [
           "boss",
-          "Well put down the shovel. I need a full explanation."
+          "Then stop engineering paths. I need a full explanation."
         ],
         [
           "eng",
